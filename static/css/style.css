@@ -2312,6 +2312,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+  /* Hide desktop menu, show hamburger */
+  .navbar-menu {
+    display: none !important;
+  }
+  .navbar-toggle {
+    display: flex !important;
+  }
+  .desktop-only {
+    display: none !important;
+  }
+  
   .hero-content h1 {
     font-size: 2.5rem !important;
   }
