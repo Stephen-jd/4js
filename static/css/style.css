@@ -588,9 +588,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-overlay {
   position: absolute;
-    rgba(255,255,255,0.35) 0%,
-    rgba(255,255,255,0.65) 40%,
-    rgba(255,255,255,0.85) 100%
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.4) 0%,
+    rgba(10, 10, 10, 0.7) 50%,
+    rgba(10, 10, 10, 0.9) 100%
   );
   z-index: 1;
 }
@@ -599,29 +605,32 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 800px;
+  max-width: 900px;
   padding: 0 24px;
 }
 
 .hero-content h1 {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 700;
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1.1;
-  margin-bottom: 20px;
-  color: var(--black);
+  margin-bottom: 24px;
+  color: var(--white);
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 
 .hero-content h1 em {
   font-style: normal;
-  color: var(--scandi-teal-dark);
+  color: var(--scandi-teal-light);
 }
 
 .hero-content p {
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  color: var(--text-light);
-  margin-bottom: 36px;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
   line-height: 1.6;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  font-weight: 500;
 }
 
 .hero-buttons {
@@ -637,19 +646,21 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 8px;
   padding: 16px 36px;
-  background: var(--black);
-  color: var(--white);
+  background: var(--white);
+  color: var(--black);
   font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 .btn-primary:hover {
-  background: var(--scandi-teal-dark);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  background: var(--scandi-teal-light);
+  color: var(--black);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
 }
 
 .btn-ghost {
@@ -657,19 +668,21 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 8px;
   padding: 16px 36px;
-  background: transparent;
-  color: var(--black);
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  color: var(--white);
   font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 1rem;
-  border: 2px solid var(--border);
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: 2px solid rgba(255,255,255,0.3);
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
 }
 
 .btn-ghost:hover {
-  border-color: var(--black);
-  transform: translateY(-2px);
+  background: rgba(255,255,255,0.2);
+  border-color: var(--white);
+  transform: translateY(-3px);
 }
 
 /* Hero Dots */
