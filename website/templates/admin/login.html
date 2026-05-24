@@ -1,0 +1,24 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}Admin Login | 4J's Educational Academy{% endblock %}
+{% block content %}
+<div style="padding: 120px 24px 60px; max-width: 500px; margin: 0 auto;">
+    <div class="taylorfit-container" style="box-shadow: var(--shadow-lg); padding: 40px; text-align: center;">
+        <img src="{% static 'images/logo.png' %}" alt="4J's Logo" style="height: 60px; margin-bottom: 24px;">
+        <h2 class="heading-sm mb-24">Admin Portal</h2>
+        
+        <form action="{% url 'admin:login' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group" style="text-align: left;">
+                <label>Username</label>
+                <input type="text" name="username" required>
+            </div>
+            <div class="form-group" style="text-align: left;">
+                <label>Password</label>
+                <input type="password" name="password" required>
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 20px;">Secure Login</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

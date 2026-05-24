@@ -1,0 +1,46 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}Entrance Exams & UCAT | 4J's Educational Academy{% endblock %}
+{% block content %}
+<section style="background: linear-gradient(135deg, var(--bg-light) 0%, #ffffff 100%); padding: 160px 24px 80px; text-align: center; position: relative; overflow: hidden;">
+    <div class="container fade-up">
+        <span class="section-label" style="display: inline-block; margin-bottom: 16px;">Selective School Entry</span>
+        <h1 style="font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1px;">
+            The Competitive Edge.
+        </h1>
+        <p style="font-size: 1.25rem; color: var(--text-light); max-width: 600px; margin: 0 auto 40px;">
+            From highly competitive 11+ Grammar School admissions to the rigorous UCAT for medical school, our specialized coaches provide the exact strategies needed to stand out.
+        </p>
+    </div>
+    
+    <div class="scale-in" style="max-width: 1000px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg);">
+        <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=1200&q=80" alt="Exams" style="width: 100%; height: auto; display: block;">
+    </div>
+</section>
+
+<section class="section">
+    <div class="container stagger">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+            <div style="background: var(--white); padding: 40px; border-radius: 24px; box-shadow: var(--shadow-sm);">
+                <h3 style="font-size: 2rem; margin-bottom: 16px;">11+ Grammar Prep</h3>
+                <p style="color: var(--text-light); margin-bottom: 24px;">The 11+ tests skills rarely taught in standard primary schools. We break down complex logic puzzles into learnable formulas.</p>
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;">
+                    <li><i class="fas fa-check" style="color: var(--accent); margin-right: 8px;"></i> Verbal Reasoning</li>
+                    <li><i class="fas fa-check" style="color: var(--accent); margin-right: 8px;"></i> Non-Verbal & Spatial Reasoning</li>
+                    <li><i class="fas fa-check" style="color: var(--accent); margin-right: 8px;"></i> Advanced Maths & Comprehension</li>
+                </ul>
+            </div>
+            
+            <div style="background: var(--white); padding: 40px; border-radius: 24px; box-shadow: var(--shadow-sm);">
+                <h3 style="font-size: 2rem; margin-bottom: 16px;">UCAT & Medicine</h3>
+                <p style="color: var(--text-light); margin-bottom: 24px;">Scoring highly on the UCAT requires extreme speed and pattern recognition. Our medical students and doctors coach applicants through the exact techniques they used.</p>
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px;">
+                    <li><i class="fas fa-check" style="color: var(--accent); margin-right: 8px;"></i> Abstract Reasoning Shortcuts</li>
+                    <li><i class="fas fa-check" style="color: var(--accent); margin-right: 8px;"></i> Decision Making Logic</li>
+                    <li><i class="fas fa-check" style="color: var(--accent); margin-right: 8px;"></i> Personal Statement & Interview Prep</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

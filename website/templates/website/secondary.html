@@ -1,0 +1,33 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}Secondary Education (KS3) | 4J's Educational Academy{% endblock %}
+{% block content %}
+<section style="background: linear-gradient(135deg, var(--bg-light) 0%, #ffffff 100%); padding: 160px 24px 80px; text-align: center; position: relative; overflow: hidden;">
+    <div class="container fade-up">
+        <span class="section-label" style="display: inline-block; margin-bottom: 16px;">Key Stage 3 (Years 7, 8 & 9)</span>
+        <h1 style="font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1px;">
+            Navigating the Transition.
+        </h1>
+        <p style="font-size: 1.25rem; color: var(--text-light); max-width: 600px; margin: 0 auto 40px;">
+            The move to secondary school introduces new subjects and higher expectations. We help students consolidate primary knowledge and build robust study habits ahead of GCSEs.
+        </p>
+    </div>
+    
+    <div class="scale-in" style="max-width: 1000px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg);">
+        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80" alt="Secondary" style="width: 100%; height: auto; display: block;">
+    </div>
+</section>
+
+<section class="section">
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+        <div class="fade-up">
+            <h2 class="heading-md" style="margin-bottom: 24px;">Laying the Groundwork for GCSE</h2>
+            <p class="text-light" style="font-size: 1.1rem; margin-bottom: 16px;">Years 7 to 9 are critical. If a student falls behind here, the jump to GCSEs becomes incredibly stressful.</p>
+            <p class="text-light" style="font-size: 1.1rem; margin-bottom: 24px;">Our tutors focus on ensuring core Maths (algebra, geometry) and English (essay structure, analysis) skills are rock-solid, while introducing them to specific scientific disciplines.</p>
+        </div>
+        <div class="scale-in">
+            <img src="https://images.unsplash.com/photo-1453733190371-0a9bedecd228?auto=format&fit=crop&w=800&q=80" alt="Studying" style="width: 100%; border-radius: 24px; box-shadow: var(--shadow-lg);">
+        </div>
+    </div>
+</section>
+{% endblock %}

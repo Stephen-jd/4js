@@ -1,0 +1,690 @@
+[
+    {
+        "question": "What is 4J's Educational Academy?",
+        "answer": "4J's Educational Academy is a premier UK-based edtech company providing expert 1:1 and group tutoring from Year 1 to Year 13 across all subjects and UK boards."
+    },
+    {
+        "question": "How much does tutoring cost?",
+        "answer": "Our pricing depends on the year group and whether you choose 1:1 or group sessions. Please contact us at 4jseducationalacademy@gmail.com or on WhatsApp for a personalized quote."
+    },
+    {
+        "question": "Where are you located?",
+        "answer": "Our main office is located at Regus, Stuart House - East Wing, St John's Street, Peterborough, PE1 5DD."
+    },
+    {
+        "question": "How can I contact you?",
+        "answer": "You can call or WhatsApp us at +44 7854 885030, or email us at 4jseducationalacademy@gmail.com."
+    },
+    {
+        "question": "What is your methodology?",
+        "answer": "We use an AI-powered adaptive learning approach combined with personalized weekly plans and unlimited mock tests, similar to Atom Learning but with dedicated 1:1 tutors."
+    },
+    {
+        "question": "Do you cover the AQA exam board?",
+        "answer": "Yes, our tutors are highly experienced with the AQA syllabus across all subjects, providing targeted mock exams and marking schemes."
+    },
+    {
+        "question": "Do you teach Edexcel?",
+        "answer": "Absolutely! We provide extensive support for the Edexcel board, particularly for Maths and Sciences at GCSE and A-Level."
+    },
+    {
+        "question": "What about OCR?",
+        "answer": "Yes, we cover OCR and OCR Gateway. Our tutors know exactly what OCR examiners are looking for in long-form answers."
+    },
+    {
+        "question": "Do you support CIE (Cambridge International)?",
+        "answer": "Yes, we support CIE (Cambridge International Exams) for both iGCSE and A-Levels."
+    },
+    {
+        "question": "Can you help with WJEC?",
+        "answer": "Yes, we have specialist tutors familiar with the WJEC and Eduqas specifications for students in Wales and England."
+    },
+    {
+        "question": "Our tutors are experienced with all major UK exam boards including AQA, Edexcel, OCR, CIE, and WJEC.",
+        "answer": "Yes, we provide comprehensive tuition for all major UK exam boards: AQA, Edexcel, OCR, CIE, and WJEC, ensuring your child is perfectly prepared for their specific papers."
+    },
+    {
+        "question": "ks3 syllabus pls",
+        "answer": "The Key Stage 3 (KS3) syllabus covers Years 7, 8, and 9. It builds on primary fundamentals. We focus on core Maths (algebra, geometry), English (essay structure, text analysis), and Sciences (introducing Biology, Chemistry, and Physics as separate disciplines)."
+    },
+    {
+        "question": "What do you teach in KS3?",
+        "answer": "In KS3, we cover the National Curriculum focusing on building a rock-solid foundation in English, Maths, and Science so the jump to GCSE in Year 10 is seamless."
+    },
+    {
+        "question": "ks3 maths",
+        "answer": "Our KS3 Maths program covers number operations, algebra basics, geometry, ratio, and statistics. We ensure students deeply understand the concepts rather than just memorizing formulas, preparing them perfectly for GCSE Maths."
+    },
+    {
+        "question": "Do you offer KS3 Science?",
+        "answer": "Yes, we break KS3 Science down into Biology, Chemistry, and Physics modules, introducing students to laboratory concepts and scientific reasoning."
+    },
+    {
+        "question": "decision making is there",
+        "answer": "Yes! For A-Level Further Maths, we cover the Decision Making (Decision Maths) modules. Additionally, for aspiring medical students, we provide intensive coaching on the Decision Making section of the UCAT exam."
+    },
+    {
+        "question": "year 12 decison making is there",
+        "answer": "Yes, we offer specialized tuition for Year 12 Decision Making. Whether it's the Decision Mathematics module for A-Level Further Maths or the Decision Making subtest for the UCAT medical entrance exam, our expert tutors have you covered."
+    },
+    {
+        "question": "Do you offer Year 12 tutoring?",
+        "answer": "Yes, Year 12 is critical as it sets the foundation for A-Levels. We offer intensive subject-specific coaching to ensure strong predicted grades for UCAS applications."
+    },
+    {
+        "question": "Do you prepare for UCAT?",
+        "answer": "Yes, we provide specialized UCAT coaching for aspiring medical and dental students. We cover Abstract Reasoning, Verbal Reasoning, Quantitative Reasoning, Decision Making, and Situational Judgement."
+    },
+    {
+        "question": "Do you offer 11+ preparation?",
+        "answer": "Yes! We offer intensive 11+ Grammar school preparation covering Maths, English, Verbal Reasoning, and Non-Verbal Reasoning."
+    },
+    {
+        "question": "What is covered in Primary?",
+        "answer": "Our primary mastery covers KS1 and KS2, focusing on phonics, reading comprehension, basic numeracy, and Year 6 SATs preparation."
+    },
+    {
+        "question": "Do you offer coding classes for kids?",
+        "answer": "Yes! We offer interactive coding exercises (Scratch, Python) specially designed for small children to build logical thinking and problem-solving skills."
+    },
+    {
+        "question": "General question about UK education 0",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 1",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 2",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 3",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 4",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 5",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 6",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 7",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 8",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 9",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 10",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 11",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 12",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 13",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 14",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 15",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 16",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 17",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 18",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 19",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 20",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 21",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 22",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 23",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 24",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 25",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 26",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 27",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 28",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 29",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 30",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 31",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 32",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 33",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 34",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 35",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 36",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 37",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 38",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 39",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 40",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 41",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 42",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 43",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 44",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 45",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 46",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 47",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 48",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 49",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 50",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 51",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 52",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 53",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 54",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 55",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 56",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 57",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 58",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 59",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 60",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 61",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 62",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 63",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 64",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 65",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 66",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 67",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 68",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 69",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 70",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 71",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 72",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 73",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 74",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 75",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 76",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 77",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 78",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 79",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 80",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 81",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 82",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 83",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 84",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 85",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 86",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 87",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 88",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 89",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 90",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 91",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 92",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 93",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 94",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 95",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 96",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 97",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 98",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 99",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 100",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 101",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 102",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 103",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 104",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 105",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 106",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 107",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 108",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 109",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 110",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 111",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 112",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 113",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 114",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 115",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 116",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 117",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 118",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 119",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 120",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 121",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 122",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 123",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 124",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 125",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 126",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 127",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 128",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 129",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 130",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 131",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 132",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 133",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 134",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 135",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 136",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 137",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 138",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 139",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 140",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 141",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 142",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 143",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 144",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 145",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 146",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 147",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 148",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    },
+    {
+        "question": "General question about UK education 149",
+        "answer": "At 4J's Educational Academy, we tailor our approach to each student's needs, strictly following the UK National Curriculum to guarantee the best possible outcomes in their specific exams."
+    }
+]

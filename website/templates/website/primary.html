@@ -1,0 +1,96 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}Primary Education (KS1-KS2) | 4J's Educational Academy{% endblock %}
+{% block content %}
+<!-- Hero Section -->
+<section style="background: linear-gradient(135deg, var(--bg-light) 0%, #ffffff 100%); padding: 160px 24px 80px; text-align: center; position: relative; overflow: hidden;">
+    <div class="container fade-up">
+        <span class="section-label" style="display: inline-block; margin-bottom: 16px;">Key Stage 1 & 2</span>
+        <h1 style="font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1px;">
+            Building the Foundation.<br><span class="accent">Brilliantly.</span>
+        </h1>
+        <p style="font-size: 1.25rem; color: var(--text-light); max-width: 600px; margin: 0 auto 40px;">
+            A revolutionary approach to primary education. We combine 1:1 expert tutoring with AI-adaptive learning to ensure your child masters English, Maths, and Science from day one.
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center;">
+            <a href="{% url 'home' %}#plan-builder" class="btn-primary" style="padding: 16px 32px; font-size: 1.1rem; border-radius: 50px;">Start Custom Plan</a>
+            <a href="#curriculum" class="btn-ghost" style="padding: 16px 32px; font-size: 1.1rem; border-radius: 50px;">Explore Curriculum</a>
+        </div>
+    </div>
+    
+    <div class="scale-in" style="max-width: 1000px; margin: 60px auto 0; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg);">
+        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80" alt="Primary Education" style="width: 100%; height: auto; display: block;">
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="section" style="background: var(--white); padding: 80px 0;">
+    <div class="container stagger">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center;">
+            <div>
+                <h3 style="font-size: 3rem; font-weight: 700; color: var(--accent);">98%</h3>
+                <p style="font-weight: 500; color: var(--text-dark);">SATs Pass Rate</p>
+            </div>
+            <div>
+                <h3 style="font-size: 3rem; font-weight: 700; color: var(--accent);">1:1</h3>
+                <p style="font-weight: 500; color: var(--text-dark);">Dedicated Attention</p>
+            </div>
+            <div>
+                <h3 style="font-size: 3rem; font-weight: 700; color: var(--accent);">5-11</h3>
+                <p style="font-weight: 500; color: var(--text-dark);">Years of Age</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Curriculum Section -->
+<section id="curriculum" class="section section--alt">
+    <div class="container">
+        <div class="fade-up" style="text-align: center; margin-bottom: 60px;">
+            <h2 class="heading-md">The Primary Pathway</h2>
+            <p class="text-light" style="max-width: 600px; margin: 16px auto 0;">From early phonics to advanced Year 6 reasoning, we cover the entire national curriculum and beyond.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 80px;">
+            <div class="fade-up" style="padding-right: 40px;">
+                <h3 style="font-size: 2rem; margin-bottom: 16px;">Key Stage 1 (Ages 5-7)</h3>
+                <p style="color: var(--text-light); margin-bottom: 24px;">The crucial early years. We focus heavily on phonics, reading comprehension, and foundational numeracy. Our tutors make learning feel like a game, fostering a lifelong love of education.</p>
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px;">
+                    <li><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Interactive Phonics & Spelling</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Early Number Bonds & Basic Arithmetic</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Confidence Building & Expression</li>
+                </ul>
+            </div>
+            <div class="scale-in">
+                <img src="https://images.unsplash.com/photo-1544830251-2feeb1ab3a34?auto=format&fit=crop&w=800&q=80" alt="KS1 Learning" style="width: 100%; border-radius: 24px; box-shadow: var(--shadow-md);">
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+            <div class="scale-in" style="order: 1;">
+                <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=800&q=80" alt="KS2 Learning" style="width: 100%; border-radius: 24px; box-shadow: var(--shadow-md);">
+            </div>
+            <div class="fade-up" style="order: 2; padding-left: 40px;">
+                <h3 style="font-size: 2rem; margin-bottom: 16px;">Key Stage 2 (Ages 7-11)</h3>
+                <p style="color: var(--text-light); margin-bottom: 24px;">Moving from learning to read, to reading to learn. We introduce complex problem-solving, advanced grammar, and core scientific principles to prepare them for SATs and secondary school.</p>
+                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px;">
+                    <li><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Year 6 SATs Preparation</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Fractions, Decimals & Applied Maths</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Advanced Creative Writing</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Coding for Kids Section -->
+<section class="section" style="background: var(--text-dark); color: white;">
+    <div class="container fade-up" style="text-align: center;">
+        <h2 class="heading-md" style="color: white; margin-bottom: 24px;">Plus: Coding for Young Minds</h2>
+        <p style="max-width: 700px; margin: 0 auto 40px; color: rgba(255,255,255,0.8); font-size: 1.1rem;">
+            In today's digital world, coding is as essential as reading. We offer optional add-on modules for primary students to learn logic, problem-solving, and basic programming using Scratch and Python in a highly visual, gamified environment.
+        </p>
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80" alt="Kid Coding" style="border-radius: 24px; margin-top: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+    </div>
+</section>
+{% endblock %}

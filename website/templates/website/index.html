@@ -1,0 +1,819 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4J's Educational Academy | Shaping Bright Futures</title>
+    <meta name="description" content="Expert 1:1 & Group Tutoring in Peterborough for Year 1 to Year 13. We cover all UK boards, 11+, GCSE, A-Level, and UCAT preparation.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- 0. Opening Animation (Knowledge Wave) -->
+    <div id="particles-overlay">
+        <canvas id="particles-canvas"></canvas>
+        <div class="particles-logo">
+            <h2>4J's Educational Academy</h2>
+            <p>Shaping Bright Futures</p>
+        </div>
+    </div>
+
+    <!-- 1. Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="#" class="navbar-logo">
+                <img src="{% static 'images/logo.png' %}" alt="4J's Logo">
+                4J's Educational Academy
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">Primary (KS1-KS2) <i class="fas fa-chevron-down chevron"></i></a>
+                    <div class="navbar-dropdown">
+                        <div class="dropdown-section-title">Key Stage 1 (Ages 5-7)</div>
+                        <a href="#" class="dropdown-link">Year 1-2: Core Subjects <small>English, Maths, Phonics</small></a>
+                        <div class="dropdown-section-title" style="margin-top: 10px;">Key Stage 2 (Ages 7-11)</div>
+                        <a href="#" class="dropdown-link">Year 3-5: Core Mastery <small>English, Maths, Science</small></a>
+                        <a href="#" class="dropdown-link">Year 6: SATs Preparation <small>Targeted exam focus</small></a>
+                    </div>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">Secondary (KS3-KS4) <i class="fas fa-chevron-down chevron"></i></a>
+                    <div class="navbar-dropdown">
+                        <a href="#" class="dropdown-link">Year 7-9: Key Stage 3 <small>Building strong foundations</small></a>
+                        <a href="#" class="dropdown-link">Year 10-11: Key Stage 4 <small>GCSE Preparation</small></a>
+                    </div>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">GCSE <i class="fas fa-chevron-down chevron"></i></a>
+                    <div class="navbar-dropdown mega">
+                        <div class="mega-col">
+                            <div class="dropdown-section-title">Core Subjects</div>
+                            <a href="#" class="dropdown-link">Mathematics</a>
+                            <a href="#" class="dropdown-link">English Language</a>
+                            <a href="#" class="dropdown-link">English Literature</a>
+                            <a href="#" class="dropdown-link">Combined Science</a>
+                        </div>
+                        <div class="mega-col">
+                            <div class="dropdown-section-title">Options</div>
+                            <a href="#" class="dropdown-link">Biology, Chemistry, Physics</a>
+                            <a href="#" class="dropdown-link">Computer Science</a>
+                            <a href="#" class="dropdown-link">Economics</a>
+                            <a href="#" class="dropdown-link">Sociology</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">A-Level <i class="fas fa-chevron-down chevron"></i></a>
+                    <div class="navbar-dropdown">
+                        <a href="#" class="dropdown-link">Mathematics & Further Maths</a>
+                        <a href="#" class="dropdown-link">Biology, Chemistry, Physics</a>
+                        <a href="#" class="dropdown-link">Economics & Computer Science</a>
+                    </div>
+                </li>
+                <li class="navbar-item">
+                    <a href="#" class="navbar-link">Entrance Exams <i class="fas fa-chevron-down chevron"></i></a>
+                    <div class="navbar-dropdown">
+                        <a href="#" class="dropdown-link">11+ Grammar Prep</a>
+                        <a href="#" class="dropdown-link">12+ / 13+ Entry</a>
+                        <a href="#" class="dropdown-link">UCAT & Medicine Pathway</a>
+                    </div>
+                </li>
+                <li class="navbar-item"><a href="#why-us" class="navbar-link">Why 4J's</a></li>
+            </ul>
+
+            <div style="display: flex; gap: 12px; align-items: center;">
+                <a href="#plan-builder" class="navbar-cta desktop-only">Custom Study Plan Builder</a>
+                <button class="navbar-toggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link">Primary (KS1-KS2)</a>
+        </div>
+        <div class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link">Secondary (KS3-KS4)</a>
+        </div>
+        <div class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link">GCSE & A-Level</a>
+        </div>
+        <div class="mobile-menu-item">
+            <a href="#" class="mobile-menu-link">Entrance Exams</a>
+        </div>
+        <div class="mobile-menu-item" style="margin-top: 20px; border: none;">
+            <a href="#plan-builder" class="btn-primary" style="width: 100%; justify-content: center;">Custom Study Plan Builder</a>
+        </div>
+    </div>
+
+    <!-- 2. Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <div class="hero-overlay"></div>
+                <img src="{% static 'images/hero/hero_students.png' %}" alt="Students in classroom">
+            </div>
+            <div class="hero-slide">
+                <div class="hero-overlay"></div>
+                <img src="{% static 'images/hero/hero_tutor.png' %}" alt="1-to-1 Tutoring">
+            </div>
+            <div class="hero-slide">
+                <div class="hero-overlay"></div>
+                <img src="{% static 'images/hero/hero_coding.png' %}" alt="Child coding">
+            </div>
+            <div class="hero-slide">
+                <div class="hero-overlay"></div>
+                <img src="{% static 'images/hero/hero_success.png' %}" alt="Exam success">
+            </div>
+        </div>
+        
+        <div class="hero-content reveal">
+            <h1>Shaping Bright Futures, <br><em>One Student at a Time</em></h1>
+            <p>Expert 1:1 & Group Tutoring · Year 1 to Year 13 · All UK Boards<br>Customised learning plans for 11+, GCSE, A-Level, and UCAT.</p>
+            <div class="hero-buttons">
+                <a href="#plan-builder" class="btn-primary">Build Your Custom Plan</a>
+                <a href="#how-it-works" class="btn-ghost"><i class="fas fa-play-circle"></i> Watch How It Works</a>
+            </div>
+        </div>
+
+        <div class="hero-dots">
+            <div class="hero-dot active"></div>
+            <div class="hero-dot"></div>
+            <div class="hero-dot"></div>
+            <div class="hero-dot"></div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- 3. Trust Bar -->
+    <section class="trust-bar">
+        <div class="container-wide trust-grid stagger">
+            <div class="trust-item">
+                <div class="trust-number" data-count="500" data-suffix="+">0</div>
+                <div class="trust-label">Students Taught</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-number" data-count="98" data-suffix="%">0</div>
+                <div class="trust-label">Pass Rate</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-number"><span class="accent">Y1</span>-13</div>
+                <div class="trust-label">Comprehensive Coverage</div>
+            </div>
+            <div class="trust-item">
+                <div class="trust-number">All</div>
+                <div class="trust-label">Major UK Boards</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Problem Solver -->
+    <section class="section section--alt" id="solutions">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Solving Your Child's Learning Challenges</span>
+                <h2 class="heading-md section-title">We Understand The Struggles Parents Face</h2>
+                <p class="section-subtitle">Every child learns differently. We identify roadblocks and create clear, actionable paths to success.</p>
+            </div>
+
+            <div class="problem-grid stagger">
+                <!-- Problem 1 -->
+                <div class="problem-card">
+                    <div class="problem-card-icon"><i class="fas fa-sort-amount-down"></i></div>
+                    <h4>Falling Behind in Class?</h4>
+                    <p>Large classroom sizes often mean teachers can't give individual attention. Students miss core concepts and quickly fall behind the curriculum.</p>
+                    <div class="problem-card-solution">
+                        <h4><i class="fas fa-check-circle"></i> Our Solution</h4>
+                        <p>We provide focused 1:1 attention to bridge knowledge gaps, moving at your child's pace until they fully grasp the fundamentals.</p>
+                    </div>
+                </div>
+
+                <!-- Problem 2 -->
+                <div class="problem-card">
+                    <div class="problem-card-icon"><i class="fas fa-brain"></i></div>
+                    <h4>Severe Exam Anxiety?</h4>
+                    <p>Many bright students underperform because they freeze during exams, struggling with time management and pressure.</p>
+                    <div class="problem-card-solution">
+                        <h4><i class="fas fa-check-circle"></i> Our Solution</h4>
+                        <p>We conduct regular mock exams under real timed conditions, teaching them proven strategies to manage stress and tackle hard questions.</p>
+                    </div>
+                </div>
+
+                <!-- Problem 3 -->
+                <div class="problem-card">
+                    <div class="problem-card-icon"><i class="fas fa-bed"></i></div>
+                    <h4>Not Challenged Enough?</h4>
+                    <p>Gifted students can become bored and disengaged when the school curriculum isn't pushing them to their full potential.</p>
+                    <div class="problem-card-solution">
+                        <h4><i class="fas fa-check-circle"></i> Our Solution</h4>
+                        <p>We provide advanced extension materials, including intensive 11+ Grammar and UCAT prep, to continually challenge and inspire them.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Course Timeline -->
+    <section class="section" id="courses">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Our Programmes</span>
+                <h2 class="heading-md section-title">Expert Tuition For Every Stage</h2>
+                <p class="section-subtitle">From early phonics to advanced A-Level sciences, our 7-month comprehensive plans ensure no gaps in knowledge.</p>
+            </div>
+
+            <div class="courses-grid stagger">
+                <!-- Primary -->
+                <div class="course-card">
+                    <div class="course-card-image">
+                        <div class="course-card-badge">Key Stage 1 & 2</div>
+                        <img src="{% static 'images/courses/course_primary.png' %}" alt="Primary Education">
+                    </div>
+                    <div class="course-card-body">
+                        <h3>Primary Mastery</h3>
+                        <p>Laying the critical foundation in literacy and numeracy, fostering a lifelong love of learning.</p>
+                        <div class="course-card-meta">
+                            <span class="course-tag">Ages 5-11</span>
+                            <span class="course-tag">SATs Prep</span>
+                        </div>
+                    </div>
+                    <div class="course-card-expand">
+                        <ul>
+                            <li>Phonics & Reading Comprehension</li>
+                            <li>Mental Arithmetic & Reasoning</li>
+                            <li>Core Science exploration</li>
+                            <li>SATs specific exam technique</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Secondary -->
+                <div class="course-card">
+                    <div class="course-card-image">
+                        <div class="course-card-badge">Key Stage 3 & 4</div>
+                        <img src="{% static 'images/courses/course_secondary.png' %}" alt="Secondary Education">
+                    </div>
+                    <div class="course-card-body">
+                        <h3>GCSE Preparation</h3>
+                        <p>Intensive subject-specific coaching, focusing on curriculum mastery and exam strategy.</p>
+                        <div class="course-card-meta">
+                            <span class="course-tag">Ages 11-16</span>
+                            <span class="course-tag">All Boards</span>
+                        </div>
+                    </div>
+                    <div class="course-card-expand">
+                        <ul>
+                            <li>Maths, English, Triple/Combined Science</li>
+                            <li>Computer Science, Economics, Sociology</li>
+                            <li>Mock exams under timed conditions</li>
+                            <li>Detailed feedback and revision planning</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- A-Level / UCAT -->
+                <div class="course-card">
+                    <div class="course-card-image">
+                        <div class="course-card-badge">Key Stage 5</div>
+                        <img src="{% static 'images/courses/course_alevel.png' %}" alt="A-Level Education">
+                    </div>
+                    <div class="course-card-body">
+                        <h3>A-Level & Medicine Pathway</h3>
+                        <p>Rigorous academic coaching for top university admissions, including specialized medical pathways.</p>
+                        <div class="course-card-meta">
+                            <span class="course-tag">Ages 16-18</span>
+                            <span class="course-tag">UCAT Prep</span>
+                        </div>
+                    </div>
+                    <div class="course-card-expand">
+                        <ul>
+                            <li>Advanced Maths & Further Maths</li>
+                            <li>Biology, Chemistry, Physics</li>
+                            <li>UCAT & BMAT intensive training</li>
+                            <li>Personal statement & interview prep</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Why 4J's (USP) -->
+    <section class="section section--dark usp-section" id="why-us">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">The 4J's Difference</span>
+                <h2 class="heading-md section-title" style="color: white;">More Than Just Tutoring</h2>
+            </div>
+        </div>
+        
+        <div class="usp-carousel-track stagger">
+            <div class="usp-card">
+                <img src="{% static 'images/usp/usp_personal_tutor.png' %}" alt="Dedicated Tutor">
+                <div class="usp-card-number">1</div>
+                <div class="usp-card-overlay">
+                    <h3>Dedicated Personal Tutor</h3>
+                    <p>Carefully matched to your child's unique learning style and personality.</p>
+                </div>
+            </div>
+            <div class="usp-card">
+                <img src="{% static 'images/hero/hero_coding.png' %}" alt="Customised Plan">
+                <div class="usp-card-number">2</div>
+                <div class="usp-card-overlay">
+                    <h3>Customised Lesson Plans</h3>
+                    <p>No cookie-cutter curricula. Every plan is built around YOUR child's specific needs.</p>
+                </div>
+            </div>
+            <div class="usp-card">
+                <img src="{% static 'images/hero/hero_tutor.png' %}" alt="1:1 Interactive">
+                <div class="usp-card-number">3</div>
+                <div class="usp-card-overlay">
+                    <h3>1:1 Interactive Sessions</h3>
+                    <p>Live, engaging, and personal. Not just watching pre-recorded videos.</p>
+                </div>
+            </div>
+            <div class="usp-card">
+                <img src="{% static 'images/usp/usp_coding_kids.png' %}" alt="Coding">
+                <div class="usp-card-number">4</div>
+                <div class="usp-card-overlay">
+                    <h3>Coding for Young Minds</h3>
+                    <p>Specialized logic and programming courses (Scratch/Python) for ages 5-11.</p>
+                </div>
+            </div>
+            <div class="usp-card">
+                <img src="{% static 'images/hero/hero_success.png' %}" alt="Dashboard">
+                <div class="usp-card-number">5</div>
+                <div class="usp-card-overlay">
+                    <h3>Progress Dashboard</h3>
+                    <p>Parents can track improvement, session notes, and mock results in real-time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Custom Study Plan Builder -->
+    <section class="section plan-builder-section" id="plan-builder">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Interactive Roadmap</span>
+                <h2 class="heading-md section-title">Custom Study Plan Builder</h2>
+                <p class="section-subtitle">Tell us about your child's goals, and we'll instantly build a visual learning roadmap to success.</p>
+            </div>
+
+            <div class="taylorfit-container reveal-scale">
+                <div class="taylorfit-progress">
+                    <div class="taylorfit-step-dot active"></div>
+                    <div class="taylorfit-step-dot"></div>
+                    <div class="taylorfit-step-dot"></div>
+                </div>
+
+                <form id="taylorfit-form">
+                    <!-- Step 1 -->
+                    <div class="taylorfit-step active">
+                        <h3>Let's get started</h3>
+                        <p>Tell us who we are building this plan for.</p>
+                        
+                        <div class="form-group">
+                            <label>Student's First Name</label>
+                            <input type="text" name="name" required placeholder="e.g. Sarah">
+                        </div>
+                        <div class="form-group">
+                            <label>Current Year Group</label>
+                            <select name="year" required>
+                                <option value="" disabled selected>Select Year...</option>
+                                <option value="1">Year 1 (Age 5-6)</option>
+                                <option value="2">Year 2 (Age 6-7)</option>
+                                <option value="6">Year 6 (Age 10-11)</option>
+                                <option value="11">Year 11 (Age 15-16 - GCSE)</option>
+                                <option value="13">Year 13 (Age 17-18 - A-Level)</option>
+                            </select>
+                        </div>
+                        <div class="taylorfit-buttons">
+                            <button type="button" class="btn-primary btn-next" style="width: 100%; justify-content: center;">Next Step</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="taylorfit-step">
+                        <h3>What are we preparing for?</h3>
+                        <p>Select all that apply.</p>
+                        
+                        <div class="checkbox-group form-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="exams" value="11+"> 11+ Grammar
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="exams" value="SATs"> SATs
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="exams" value="GCSE Maths"> GCSE Maths
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="exams" value="GCSE English"> GCSE English
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="exams" value="A-Level Science"> A-Level Science
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" name="exams" value="UCAT"> UCAT/Medicine
+                            </label>
+                        </div>
+                        <div class="taylorfit-buttons">
+                            <button type="button" class="btn-back">Back</button>
+                            <button type="button" class="btn-primary btn-next" style="flex: 1; justify-content: center;">Next Step</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="taylorfit-step">
+                        <h3>Set the target</h3>
+                        <p>Where are we aiming?</p>
+                        
+                        <div class="form-group">
+                            <label>Target Grade / Goal</label>
+                            <select name="target_grade" required>
+                                <option value="Top Grades (8-9 / A*)">Top Grades (8-9 / A*)</option>
+                                <option value="Strong Pass (5-7 / B-C)">Strong Pass (5-7 / B-C)</option>
+                                <option value="Grammar School Entry">Grammar School Entry</option>
+                                <option value="General Improvement">General Confidence & Improvement</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Any specific challenges? (Optional)</label>
+                            <textarea name="guidance" placeholder="e.g. Struggles with algebra, needs help with exam timing..."></textarea>
+                        </div>
+                        <div class="taylorfit-buttons">
+                            <button type="button" class="btn-back">Back</button>
+                            <button type="submit" id="tf-submit" class="btn-primary" style="flex: 1; justify-content: center;">Generate My Plan</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="taylorfit-result">
+                    <h3 id="tf-result-name" class="heading-sm">Sarah's Custom Plan</h3>
+                    <p id="tf-result-goal" class="text-muted">Target: Top Grades</p>
+                    
+                    <div class="plan-builder-roadmap">
+                        <div class="roadmap-step">
+                            <div class="roadmap-icon"><i class="fas fa-clipboard-check"></i></div>
+                            <span>1. Assessment</span>
+                            <p>Identify knowledge gaps and learning style.</p>
+                        </div>
+                        <div class="roadmap-arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+                        <div class="roadmap-step">
+                            <div class="roadmap-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                            <span>2. 1:1 Focus</span>
+                            <p>Targeted weekly sessions over 7 months.</p>
+                        </div>
+                        <div class="roadmap-arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+                        <div class="roadmap-step">
+                            <div class="roadmap-icon"><i class="fas fa-file-signature"></i></div>
+                            <span>3. Mock Papers</span>
+                            <p>Practice under real exam pressure.</p>
+                        </div>
+                        <div class="roadmap-arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+                        <div class="roadmap-step" style="border-color: var(--success);">
+                            <div class="roadmap-icon" style="background: var(--success); color: white;"><i class="fas fa-graduation-cap"></i></div>
+                            <span>4. Success</span>
+                            <p>Achieve the target grades.</p>
+                        </div>
+                    </div>
+
+                    <p style="margin: 24px 0;">We have a blueprint ready. Our expert team will review this and contact you with a detailed curriculum.</p>
+                    
+                    <a href="#" id="tf-whatsapp-link" class="btn-primary" style="background: var(--whatsapp); width: 100%; justify-content: center;">
+                        <i class="fab fa-whatsapp"></i> Chat with Admin to Finalize
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. How It Works -->
+    <section class="section section--alt" id="how-it-works">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">The Process</span>
+                <h2 class="heading-md section-title">Your Journey With Us</h2>
+            </div>
+
+            <div class="how-grid stagger">
+                <div class="how-card">
+                    <div class="how-card-number">1</div>
+                    <h3>Free Consultation</h3>
+                    <p>We discuss your child's current level, target goals, and specific challenges to understand exactly what they need.</p>
+                    <div class="how-connector"></div>
+                </div>
+                <div class="how-card">
+                    <div class="how-card-number">2</div>
+                    <h3>Customised Plan</h3>
+                    <p>Our academic directors build a tailored curriculum focusing on high-yield topics and exam technique.</p>
+                    <div class="how-connector"></div>
+                </div>
+                <div class="how-card">
+                    <div class="how-card-number">3</div>
+                    <h3>Interactive Sessions</h3>
+                    <p>Your child begins engaging 1:1 or small group sessions with their dedicated expert tutor.</p>
+                    <div class="how-connector"></div>
+                </div>
+                <div class="how-card">
+                    <div class="how-card-number">4</div>
+                    <h3>Exam Success</h3>
+                    <p>Through regular mock tests and constant feedback, your child approaches exam day with total confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Reviews -->
+    <section class="reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Success Stories</span>
+                <h2 class="heading-md section-title">Loved by Parents & Students</h2>
+            </div>
+        </div>
+
+        <div class="reviews-track-container">
+            <div class="reviews-track">
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="{% static 'images/reviews/student_1.png' %}" alt="Student" class="review-avatar">
+                        <div class="review-info">
+                            <h4>Aarav M.</h4>
+                            <span class="review-role">Year 6 Student (11+ Prep)</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The tutors are amazing! They made the Non-Verbal Reasoning puzzles actually fun. I passed my grammar school entrance with top marks!"</p>
+                </div>
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="{% static 'images/reviews/student_2.png' %}" alt="Student" class="review-avatar">
+                        <div class="review-info">
+                            <h4>Chloe T.</h4>
+                            <span class="review-role">Year 11 (GCSE Science)</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"I was really struggling with Chemistry, but the 1:1 sessions completely changed how I understand the concepts. Got an 8 in my final exams!"</p>
+                </div>
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="{% static 'images/reviews/student_3.png' %}" alt="Student" class="review-avatar">
+                        <div class="review-info">
+                            <h4>James's Mother</h4>
+                            <span class="review-role">Parent (Primary Maths)</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"4J's Educational Academy has been a blessing. The bespoke plan they made for James has improved his confidence immensely."</p>
+                </div>
+                 <!-- Review 4 -->
+                 <div class="review-card">
+                    <div class="review-header">
+                        <img src="{% static 'images/reviews/student_4.png' %}" alt="Student" class="review-avatar">
+                        <div class="review-info">
+                            <h4>Zara K.</h4>
+                            <span class="review-role">Year 13 (UCAT Prep)</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The UCAT coaching was phenomenal. The abstract reasoning strategies were exactly what I needed. I secured all 4 of my medicine offers!"</p>
+                </div>
+                <!-- Duplicate for seamless looping -->
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="{% static 'images/reviews/student_1.png' %}" alt="Student" class="review-avatar">
+                        <div class="review-info">
+                            <h4>Aarav M.</h4>
+                            <span class="review-role">Year 6 Student (11+ Prep)</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The tutors are amazing! They made the Non-Verbal Reasoning puzzles actually fun. I passed my grammar school entrance with top marks!"</p>
+                </div>
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="{% static 'images/reviews/student_2.png' %}" alt="Student" class="review-avatar">
+                        <div class="review-info">
+                            <h4>Chloe T.</h4>
+                            <span class="review-role">Year 11 (GCSE Science)</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"I was really struggling with Chemistry, but the 1:1 sessions completely changed how I understand the concepts. Got an 8 in my final exams!"</p>
+                </div>
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="{% static 'images/reviews/student_3.png' %}" alt="Student" class="review-avatar">
+                        <div class="review-info">
+                            <h4>James's Mother</h4>
+                            <span class="review-role">Parent (Primary Maths)</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"4J's Educational Academy has been a blessing. The bespoke plan they made for James has improved his confidence immensely."</p>
+                </div>
+                 <!-- Review 4 -->
+                 <div class="review-card">
+                    <div class="review-header">
+                        <img src="{% static 'images/reviews/student_4.png' %}" alt="Student" class="review-avatar">
+                        <div class="review-info">
+                            <h4>Zara K.</h4>
+                            <span class="review-role">Year 13 (UCAT Prep)</span>
+                        </div>
+                    </div>
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The UCAT coaching was phenomenal. The abstract reasoning strategies were exactly what I needed. I secured all 4 of my medicine offers!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Modal -->
+    <div class="review-modal-overlay" id="review-modal-overlay">
+        <div class="review-modal">
+            <button class="review-modal-close"><i class="fas fa-times"></i></button>
+            <div id="review-modal-content"></div>
+        </div>
+    </div>
+
+    <!-- 9. Contact & Footer -->
+    <section class="section section--alt" id="contact" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <h2 class="heading-md mb-24">Get in Touch</h2>
+                    <p class="text-light mb-48">Have a question or ready to book your free consultation? We're here to help.</p>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>Regus, Stuart House – East Wing,<br>St John's Street, Peterborough, PE1 5DD</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+44 7854 885030</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>4jseducationalacademy@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form reveal-right">
+                    <div class="taylorfit-container" style="box-shadow: none; padding: 32px;">
+                        <h3 class="mb-24">Send a Message</h3>
+                        <form action="/api/contact/" method="POST">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container-wide">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <h3><img src="{% static 'images/logo.png' %}" alt="4J's Logo" style="height: 40px; display: inline-block; vertical-align: middle; margin-right: 10px;">4J's</h3>
+                        <p>"Shaping Bright Futures, One Student at a Time"</p>
+                        <div class="footer-contact-item"><i class="fas fa-envelope"></i> 4jseducationalacademy@gmail.com</div>
+                        <div class="footer-contact-item"><i class="fas fa-phone"></i> +44 7854 885030</div>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Programmes</h4>
+                        <a href="#">Primary (KS1-KS2)</a>
+                        <a href="#">Secondary (KS3-KS4)</a>
+                        <a href="#">GCSE Tuition</a>
+                        <a href="#">A-Level Coaching</a>
+                        <a href="#">11+ Preparation</a>
+                        <a href="#">UCAT & Medicine</a>
+                        <a href="#">Coding for Kids</a>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Exam Boards</h4>
+                        <a href="#">AQA</a>
+                        <a href="#">Edexcel</a>
+                        <a href="#">OCR</a>
+                        <a href="#">CIE / Cambridge</a>
+                        <a href="#">WJEC</a>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Key Stages</h4>
+                        <a href="#">Key Stage 1 (Y1-Y2)</a>
+                        <a href="#">Key Stage 2 (Y3-Y6)</a>
+                        <a href="#">Key Stage 3 (Y7-Y9)</a>
+                        <a href="#">Key Stage 4 (Y10-11)</a>
+                        <a href="#">Key Stage 5 (Y12-13)</a>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h4>Support & Legal</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">Safeguarding Policy</a>
+                        <a href="#">Cookie Policy</a>
+                        <a href="#">Accessibility</a>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2025 4J's Educational Academy Ltd. Registered in England & Wales. All Rights Reserved.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Floating Chatbot & WhatsApp -->
+    <a href="https://wa.me/447854885030" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="chatbot-trigger" id="chatbot-trigger">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <div class="chatbot-window" id="chatbot-window">
+        <div class="chatbot-header">
+            <div>
+                <h4>4J's Assistant</h4>
+                <div class="status">Online</div>
+            </div>
+            <button id="chatbot-close" style="color: white; font-size: 1.2rem;"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages" id="chatbot-messages">
+            <!-- Messages injected by JS -->
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbot-input-field" placeholder="Type your question...">
+            <button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="{% static 'js/particles.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/taylorfit.js' %}"></script>
+    <script src="{% static 'js/chatbot.js' %}"></script>
+</body>
+</html>

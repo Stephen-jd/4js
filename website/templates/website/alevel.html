@@ -1,0 +1,42 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}A-Level Coaching | 4J's Educational Academy{% endblock %}
+{% block content %}
+<section style="background: linear-gradient(135deg, var(--bg-light) 0%, #ffffff 100%); padding: 160px 24px 80px; text-align: center; position: relative; overflow: hidden;">
+    <div class="container fade-up">
+        <span class="section-label" style="display: inline-block; margin-bottom: 16px;">Key Stage 5 (Years 12 & 13)</span>
+        <h1 style="font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1px;">
+            The Pathway to <span class="accent">Top Universities.</span>
+        </h1>
+        <p style="font-size: 1.25rem; color: var(--text-light); max-width: 600px; margin: 0 auto 40px;">
+            A-Levels demand a profound depth of knowledge and analytical skill. Our specialist tutors, many of whom are Oxbridge graduates, provide the highest tier of academic coaching.
+        </p>
+    </div>
+    
+    <div class="scale-in" style="max-width: 1000px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg);">
+        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80" alt="University" style="width: 100%; height: auto; display: block;">
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px;" class="stagger">
+            <div style="background: var(--white); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm);">
+                <i class="fas fa-microscope" style="font-size: 2rem; color: var(--accent); margin-bottom: 16px;"></i>
+                <h3>STEM Subjects</h3>
+                <p class="text-light">Advanced Biology, Chemistry, Physics, and Mathematics (including Further Maths). We focus on derivations and complex problem-solving.</p>
+            </div>
+            <div style="background: var(--white); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm);">
+                <i class="fas fa-chart-line" style="font-size: 2rem; color: var(--accent); margin-bottom: 16px;"></i>
+                <h3>Economics & Business</h3>
+                <p class="text-light">Mastering essays, data response questions, and economic models to secure A* grades for competitive finance and management courses.</p>
+            </div>
+            <div style="background: var(--white); padding: 30px; border-radius: 16px; box-shadow: var(--shadow-sm);">
+                <i class="fas fa-university" style="font-size: 2rem; color: var(--accent); margin-bottom: 16px;"></i>
+                <h3>UCAS Support</h3>
+                <p class="text-light">Beyond subject tutoring, we assist with personal statement writing, university selection, and interview preparation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
