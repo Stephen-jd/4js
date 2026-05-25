@@ -80,12 +80,16 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+html, body {
   font-family: var(--font-body);
   color: var(--text);
   background: var(--white);
   line-height: 1.7;
+  max-width: 100%;
   overflow-x: hidden;
+}
+
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -2324,7 +2328,24 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 900px) and (orientation: landscape) {
+  .hero {
+    min-height: 120vh;
+  }
+  .hero-content {
+    margin-top: 80px;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem !important;
+  }
+}
+
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+  }
+  
   /* Hide desktop menu, show hamburger */
   .navbar-menu {
     display: none !important;
@@ -2343,7 +2364,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem !important;
   }
   .trust-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
   }
   .taylorfit-container {
@@ -2369,11 +2390,15 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   /* Fix inner page hero sections */
+  section {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
   section[style*="padding: 160px"] h1 {
-    font-size: 2.5rem !important;
+    font-size: 2.2rem !important;
   }
   section[style*="padding: 160px"] {
-    padding: 100px 16px 40px !important;
+    padding: 120px 16px 40px !important;
   }
   section[style*="grid-template-columns: 1fr 1fr"] {
     grid-template-columns: 1fr !important;
