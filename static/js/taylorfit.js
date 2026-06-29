@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Update WhatsApp link with prepopulated message
         const waLink = document.getElementById('tf-whatsapp-link');
         const text = `Hi! I just completed the Custom Study Plan Builder for ${name} (Year: ${data.year}). We're interested in tutoring for ${data.exams.join(', ')}. Target: ${target}.`;
-        waLink.href = `https://wa.me/447854885030?text=${encodeURIComponent(text)}`;
+        waLink.href = `https://wa.me/447534715058?text=${encodeURIComponent(text)}`;
     }
 
     function getCookie(name) {

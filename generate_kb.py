@@ -8,7 +8,7 @@ qa_list.extend([
     {"question": "What is 4J's Educational Academy?", "answer": "4J's Educational Academy is a premier UK-based edtech company providing expert 1:1 and group tutoring from Year 1 to Year 13 across all subjects and UK boards."},
     {"question": "How much does tutoring cost?", "answer": "Our pricing depends on the year group and whether you choose 1:1 or group sessions. Please contact us at 4jseducationalacademy@gmail.com or on WhatsApp for a personalized quote."},
     {"question": "Where are you located?", "answer": "Our main office is located at Regus, Stuart House - East Wing, St John's Street, Peterborough, PE1 5DD."},
-    {"question": "How can I contact you?", "answer": "You can call or WhatsApp us at +44 7854 885030, or email us at 4jseducationalacademy@gmail.com."},
+    {"question": "How can I contact you?", "answer": "You can call or WhatsApp us at +44 7534 715058, or email us at 4jseducationalacademy@gmail.com."},
     {"question": "What is your methodology?", "answer": "We use an AI-powered adaptive learning approach combined with personalized weekly plans and unlimited mock tests, similar to Atom Learning but with dedicated 1:1 tutors."},
 ])
 

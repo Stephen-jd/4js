@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (showWhatsapp) {
             const btn = document.createElement('a');
-            btn.href = 'https://wa.me/447854885030';
+            btn.href = 'https://wa.me/447534715058';
             btn.target = '_blank';
             btn.className = 'btn-primary';
             btn.style.marginTop = '10px';

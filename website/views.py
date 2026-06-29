@@ -60,7 +60,7 @@ def submit_contact(request):
             )
             # Redirect to WhatsApp
             wa_text = f"Hello, I have an inquiry from the website.\nName: {name}\nEmail: {email}\nMessage: {message}"
-            wa_url = f"https://wa.me/447854885030?text={urllib.parse.quote(wa_text)}"
+            wa_url = f"https://wa.me/447534715058?text={urllib.parse.quote(wa_text)}"
             return redirect(wa_url)
     return JsonResponse({'status': 'error'}, status=400)
 
@@ -111,7 +111,7 @@ def chatbot_query(request):
                 if top_matches:
                     retrieved_context = "\n".join([f"Q: {m['question']}\nA: {m['answer']}" for m in top_matches])
                 else:
-                    retrieved_context = "No highly relevant specific information found. Use general knowledge about 4J's Educational Academy (located in Peterborough, PE1 5DD. Phone: +44 7854 885030. Email: 4jseducationalacademy@gmail.com)."
+                    retrieved_context = "No highly relevant specific information found. Use general knowledge about 4J's Educational Academy (located in Peterborough, PE1 5DD. Phone: +44 7534 715058. Email: 4jseducationalacademy@gmail.com)."
             except Exception as e:
                 retrieved_context = "Error loading knowledge base."
 
