@@ -131,9 +131,9 @@
   </div>
 </section>
 
-<section class="worksheet-grid">
+<section class="worksheet-grid" id="ws-grid">
   {% for ws in worksheets %}
-  <div class="worksheet-card">
+  <div class="worksheet-card" data-subject="{{ ws.subject }}">
     <div class="ws-meta">
       <span class="ws-badge">{{ ws.key_stage }}</span>
       <span class="ws-badge" style="background: #fff3e0; color: #e65100;">{{ ws.subject }}</span>
@@ -150,5 +150,32 @@
   </div>
   {% endfor %}
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.worksheet-card');
+    
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filterValue = btn.innerText;
+        
+        cards.forEach(card => {
+          if (filterValue === 'All Subjects') {
+            card.style.display = 'block';
+          } else if (card.getAttribute('data-subject').includes(filterValue) || filterValue.includes(card.getAttribute('data-subject'))) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
 
 {% endblock %}

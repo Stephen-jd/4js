@@ -383,9 +383,9 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-dropdown {
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
-  min-width: 280px;
+  left: 0;
+  transform: translateY(8px);
+  min-width: 250px;
   background: var(--white);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
@@ -393,13 +393,19 @@ h1, h2, h3, h4, h5, h6 {
   padding: 12px;
   opacity: 0;
   visibility: hidden;
+  z-index: 2000;
   transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s var(--ease-out-expo);
+}
+
+.navbar-item:last-child .navbar-dropdown {
+  left: auto;
+  right: 0;
 }
 
 .navbar-item:hover .navbar-dropdown {
   opacity: 1;
   visibility: visible;
-  transform: translateX(-50%) translateY(0);
+  transform: translateY(0);
 }
 
 .dropdown-section-title {
