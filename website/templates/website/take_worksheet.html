@@ -1,0 +1,268 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}{{ worksheet.title }} | 4JS Educational Academy{% endblock %}
+{% block content %}
+
+<style>
+  body { background: #f7f9fc; }
+  .quiz-container {
+    max-width: 800px;
+    margin: 120px auto 80px;
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+  
+  .quiz-header {
+    background: var(--text-dark);
+    color: white;
+    padding: 30px 40px;
+    text-align: center;
+  }
+  .quiz-header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .quiz-body {
+    padding: 40px;
+  }
+  
+  .question-block {
+    display: none;
+    animation: fadeIn 0.4s ease;
+  }
+  .question-block.active {
+    display: block;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .question-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  
+  .option-label {
+    display: block;
+    padding: 16px 24px;
+    margin-bottom: 12px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  
+  .option-label:hover {
+    border-color: var(--scandi-teal-dark);
+    background: #f0f7f9;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  input[type="radio"]:checked + .option-label {
+    background: var(--scandi-teal-dark);
+    color: white;
+    border-color: var(--scandi-teal-dark);
+  }
+  
+  .quiz-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  
+  .progress-text {
+    font-weight: 600;
+    color: var(--text-light);
+  }
+  
+  .next-btn {
+    padding: 12px 32px;
+    background: var(--scandi-teal-dark);
+    color: white;
+    border: none;
+    border-radius: var(--radius-full);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  /* Results Screen */
+  .results-screen {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .results-screen.active {
+    display: block;
+  }
+  .score-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #f0f7f9;
+    border: 8px solid var(--scandi-teal-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin: 0 auto 30px;
+  }
+  .feedback-list {
+    text-align: left;
+    margin-top: 30px;
+  }
+  .feedback-item {
+    padding: 15px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border-left: 4px solid #ccc;
+  }
+  .feedback-item.correct { border-left-color: #4CAF50; }
+  .feedback-item.incorrect { border-left-color: #F44336; }
+</style>
+
+<div class="quiz-container">
+  <div class="quiz-header">
+    <h1>{{ worksheet.title }}</h1>
+    <p>{{ worksheet.key_stage }} | {{ worksheet.subject }}</p>
+  </div>
+  
+  <div class="quiz-body">
+    <form id="worksheet-form">
+      {% csrf_token %}
+      
+      {% for question in questions %}
+      <div class="question-block {% if forloop.first %}active{% endif %}" id="q-{{ forloop.counter }}">
+        <div class="question-text">{{ forloop.counter }}. {{ question.text }}</div>
+        
+        <div class="options">
+          {% for option in question.options.all %}
+          <input type="radio" name="{{ question.id }}" id="opt-{{ option.id }}" value="{{ option.id }}">
+          <label class="option-label" for="opt-{{ option.id }}">{{ option.text }}</label>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+      
+      <div class="quiz-footer">
+        <div class="progress-text">Question <span id="current-q">1</span> of {{ questions|length }}</div>
+        <button type="button" class="next-btn" id="next-btn">Next <i class="fas fa-arrow-right"></i></button>
+        <button type="button" class="next-btn" id="submit-btn" style="display: none;">Submit Assessment</button>
+      </div>
+    </form>
+    
+    <div class="results-screen" id="results-screen">
+      <h2>Assessment Complete!</h2>
+      <p style="color: var(--text-light); margin-bottom: 30px;">Here is your personalized feedback report.</p>
+      
+      <div class="score-circle">
+        <span id="score-text">0%</span>
+      </div>
+      
+      <h3 id="result-message">Great job!</h3>
+      
+      <div class="feedback-list" id="feedback-list">
+        <!-- JS injects feedback here -->
+      </div>
+      
+      <div style="margin-top: 40px;">
+        <a href="{% url 'worksheets_list' %}" class="btn-primary">Return to Hub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const totalQuestions = {{ questions|length }};
+    let currentStep = 1;
+    
+    const nextBtn = document.getElementById('next-btn');
+    const submitBtn = document.getElementById('submit-btn');
+    const currentQText = document.getElementById('current-q');
+    
+    nextBtn.addEventListener('click', () => {
+      // Basic validation
+      const currentQId = document.querySelector(`.question-block.active`).querySelector('input').name;
+      if (!document.querySelector(`input[name="${currentQId}"]:checked`)) {
+        alert("Please select an answer to continue!");
+        return;
+      }
+      
+      document.getElementById(`q-${currentStep}`).classList.remove('active');
+      currentStep++;
+      document.getElementById(`q-${currentStep}`).classList.add('active');
+      currentQText.innerText = currentStep;
+      
+      if (currentStep === totalQuestions) {
+        nextBtn.style.display = 'none';
+        submitBtn.style.display = 'inline-block';
+      }
+    });
+    
+    submitBtn.addEventListener('click', () => {
+      const form = document.getElementById('worksheet-form');
+      const formData = new FormData(form);
+      const data = {};
+      formData.forEach((value, key) => {
+        if(key !== 'csrfmiddlewaretoken') data[key] = value;
+      });
+      
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Marking...';
+      submitBtn.disabled = true;
+      
+      fetch('{% url "take_worksheet" worksheet.id %}', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+        },
+        body: JSON.stringify(data)
+      })
+      .then(res => res.json())
+      .then(result => {
+        form.style.display = 'none';
+        document.getElementById('results-screen').classList.add('active');
+        document.getElementById('score-text').innerText = `${result.percentage}%`;
+        
+        if(result.percentage >= 80) {
+          document.getElementById('result-message').innerText = "Excellent Mastery! 🏆";
+        } else if (result.percentage >= 50) {
+          document.getElementById('result-message').innerText = "Good Effort! Keep practicing. 📚";
+        } else {
+          document.getElementById('result-message').innerText = "Let's review these topics together. 💪";
+        }
+        
+        const feedbackList = document.getElementById('feedback-list');
+        result.results.forEach((r, idx) => {
+          const item = document.createElement('div');
+          item.className = `feedback-item ${r.is_correct ? 'correct' : 'incorrect'}`;
+          item.innerHTML = `
+            <strong>Q${idx + 1}:</strong> ${r.is_correct ? '<span style="color:#4CAF50"><i class="fas fa-check"></i> Correct</span>' : '<span style="color:#F44336"><i class="fas fa-times"></i> Incorrect</span>'}
+            ${!r.is_correct ? `<br><small>The correct answer was: <b>${r.correct_answer}</b></small>` : ''}
+          `;
+          feedbackList.appendChild(item);
+        });
+      });
+    });
+  });
+</script>
+{% endblock %}

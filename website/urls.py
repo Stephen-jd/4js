@@ -12,4 +12,6 @@ urlpatterns = [
     path('api/taylorfit/', views.submit_taylorfit, name='submit_taylorfit'),
     path('api/contact/', views.submit_contact, name='submit_contact'),
     path('api/chatbot/', views.chatbot_query, name='chatbot_query'),
+    path('worksheets/', views.worksheets_list, name='worksheets_list'),
+    path('worksheets/<int:worksheet_id>/', views.take_worksheet, name='take_worksheet'),
 ]

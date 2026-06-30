@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}4J's Educational Academy | Shaping Bright Futures{% endblock %}</title>
+    <title>{% block title %}4JS Educational Academy | Shaping Bright Futures{% endblock %}</title>
     <meta name="description" content="Expert 1:1 & Group Tutoring in Peterborough for Year 1 to Year 13. We cover all UK boards, 11+, GCSE, A-Level, and UCAT preparation.">
     
     <!-- CSS -->
@@ -22,8 +22,8 @@
     <nav class="navbar">
         <div class="navbar-inner">
             <a href="{% url 'home' %}" class="navbar-logo">
-                <img src="{% static 'images/logo.png' %}" alt="4J's Logo">
-                4J's Educational Academy
+                <img src="{% static 'images/logo.png' %}" alt="4JS Logo">
+                4JS Educational Academy
             </a>
 
             <!-- Desktop Menu -->
@@ -78,7 +78,10 @@
                         <a href="{% url 'entrance_exams' %}#ucat" class="dropdown-link">UCAT & Medicine Pathway</a>
                     </div>
                 </li>
-                <li class="navbar-item"><a href="{% url 'why_us' %}" class="navbar-link">Why 4J's</a></li>
+                <li class="navbar-item">
+                    <a href="{% url 'worksheets_list' %}" class="navbar-link" style="color: var(--scandi-teal-dark); font-weight: 700;"><i class="fas fa-laptop-code"></i> EdPlace Hub</a>
+                </li>
+                <li class="navbar-item"><a href="{% url 'why_us' %}" class="navbar-link">Why 4JS</a></li>
             </ul>
 
             <div style="display: flex; gap: 12px; align-items: center;">
@@ -131,7 +134,7 @@
     <div class="chatbot-window" id="chatbot-window">
         <div class="chatbot-header">
             <div>
-                <h4>4J's Assistant</h4>
+                <h4>4JS Assistant</h4>
                 <div class="status">Online</div>
             </div>
             <button id="chatbot-close" style="color: white; font-size: 1.2rem; background: none; border: none; cursor: pointer;"><i class="fas fa-times"></i></button>
@@ -150,7 +153,7 @@
         <div class="container-wide">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <h3><img src="{% static 'images/logo.png' %}" alt="4J's Logo" style="height: 40px; display: inline-block; vertical-align: middle; margin-right: 10px;">4J's</h3>
+                    <h3><img src="{% static 'images/logo.png' %}" alt="4JS Logo" style="height: 40px; display: inline-block; vertical-align: middle; margin-right: 10px;">4JS</h3>
                     <p>"Shaping Bright Futures, One Student at a Time"</p>
                     <div class="footer-contact-item"><i class="fas fa-envelope"></i> 4jseducationalacademy@gmail.com</div>
                     <div class="footer-contact-item"><i class="fas fa-phone"></i> +44 7534 715058</div>
@@ -195,7 +198,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 4J's Educational Academy Ltd. Registered in England & Wales. All Rights Reserved.</p>
+                <p>&copy; 2025 4JS Educational Academy Ltd. Registered in England & Wales. All Rights Reserved.</p>
                 <div class="footer-social">
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-facebook"></i></a>

@@ -1,5 +1,5 @@
 /**
- * 4J's Educational Academy - AI Chatbot (Qwen Local Integration)
+ * 4JS Educational Academy - AI Chatbot (Qwen Local Integration)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Initial greeting
         if (messagesEl.children.length === 0) {
-            addBotMessage("Hi! I'm the 4J's AI Assistant. How can I help you today? (e.g., 'What are your prices?' or 'Tell me about GCSEs')");
+            addBotMessage("Hi! I'm the 4JS AI Assistant. How can I help you today? (e.g., 'What are your prices?' or 'Tell me about GCSEs')");
         }
     });
 

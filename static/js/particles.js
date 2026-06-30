@@ -46,7 +46,7 @@ class ParticleWave {
         setTimeout(() => {
             const logo = document.querySelector('.particles-logo');
             if (logo) {
-                logo.querySelector('h2').textContent = "4J's Educational Academy";
+                logo.querySelector('h2').textContent = "4JS Educational Academy";
                 logo.classList.add('visible');
             }
         }, 500);

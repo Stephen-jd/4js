@@ -1,0 +1,154 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}Interactive Worksheets | 4JS Educational Academy{% endblock %}
+{% block content %}
+
+<style>
+  .worksheets-hero {
+    background: linear-gradient(135deg, var(--bg-light) 0%, #eef5f9 100%);
+    padding: 120px 24px 60px;
+    text-align: center;
+  }
+  .worksheets-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+  }
+  .worksheets-hero p {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto 40px;
+  }
+  
+  .filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: 10px 24px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--scandi-teal-dark);
+    color: white;
+    border-color: var(--scandi-teal-dark);
+  }
+
+  .worksheet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+  
+  .worksheet-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .worksheet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+  .worksheet-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: var(--scandi-teal-dark);
+  }
+  
+  .ws-meta {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  .ws-badge {
+    background: #f0f7f9;
+    color: var(--scandi-teal-dark);
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+  .worksheet-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  .worksheet-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  
+  .ws-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    background: var(--text-dark);
+    color: white;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    transition: background 0.2s;
+  }
+  .ws-btn:hover {
+    background: var(--scandi-teal-dark);
+  }
+</style>
+
+<section class="worksheets-hero">
+  <h1>Interactive Assessments Hub</h1>
+  <p>Test your knowledge with our EdPlace-style interactive worksheets. Get instant feedback, automated marking, and track your progress!</p>
+  
+  <div class="filters">
+    <button class="filter-btn active">All Subjects</button>
+    <button class="filter-btn">Maths</button>
+    <button class="filter-btn">English</button>
+    <button class="filter-btn">Science</button>
+    <button class="filter-btn">11+ Prep</button>
+  </div>
+</section>
+
+<section class="worksheet-grid">
+  {% for ws in worksheets %}
+  <div class="worksheet-card">
+    <div class="ws-meta">
+      <span class="ws-badge">{{ ws.key_stage }}</span>
+      <span class="ws-badge" style="background: #fff3e0; color: #e65100;">{{ ws.subject }}</span>
+    </div>
+    <h3>{{ ws.title }}</h3>
+    <p>{{ ws.description|truncatewords:15 }}</p>
+    <a href="{% url 'take_worksheet' ws.id %}" class="ws-btn"><i class="fas fa-play-circle"></i> Start Worksheet</a>
+  </div>
+  {% empty %}
+  <div style="text-align: center; grid-column: 1 / -1; padding: 40px; color: var(--text-light);">
+    <i class="fas fa-folder-open" style="font-size: 3rem; margin-bottom: 20px; color: #ccc;"></i>
+    <h3>No worksheets available yet.</h3>
+    <p>Check back soon for interactive assessments!</p>
+  </div>
+  {% endfor %}
+</section>
+
+{% endblock %}

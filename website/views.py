@@ -111,13 +111,13 @@ def chatbot_query(request):
                 if top_matches:
                     retrieved_context = "\n".join([f"Q: {m['question']}\nA: {m['answer']}" for m in top_matches])
                 else:
-                    retrieved_context = "No highly relevant specific information found. Use general knowledge about 4J's Educational Academy (located in Peterborough, PE1 5DD. Phone: +44 7534 715058. Email: 4jseducationalacademy@gmail.com)."
+                    retrieved_context = "No highly relevant specific information found. Use general knowledge about 4JS Educational Academy (located in Peterborough, PE1 5DD. Phone: +44 7534 715058. Email: 4jseducationalacademy@gmail.com)."
             except Exception as e:
                 retrieved_context = "Error loading knowledge base."
 
             # 2. Call Local Qwen Model via Ollama
             ollama_url = "http://localhost:11434/api/generate"
-            prompt = f"You are a helpful, professional assistant for 4J's Educational Academy. Use the following retrieved knowledge to answer the user.\n\nRetrieved Knowledge:\n{retrieved_context}\n\nUser: {user_message}\nAssistant:"
+            prompt = f"You are a helpful, professional assistant for 4JS Educational Academy. Use the following retrieved knowledge to answer the user.\n\nRetrieved Knowledge:\n{retrieved_context}\n\nUser: {user_message}\nAssistant:"
             
             payload = {
                 "model": "qwen",
@@ -138,3 +138,46 @@ def chatbot_query(request):
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=400)
     return JsonResponse({'error': 'Invalid request'}, status=400)
+
+def worksheets_list(request):
+    from .models import Worksheet
+    worksheets = Worksheet.objects.all().order_by('-created_at')
+    return render(request, 'website/worksheets.html', {'worksheets': worksheets})
+
+def take_worksheet(request, worksheet_id):
+    from .models import Worksheet
+    from django.shortcuts import get_object_or_404
+    worksheet = get_object_or_404(Worksheet, id=worksheet_id)
+    questions = worksheet.questions.prefetch_related('options').all()
+    
+    if request.method == 'POST':
+        import json
+        data = json.loads(request.body)
+        score = 0
+        total = questions.count()
+        results = []
+        for q in questions:
+            user_answer_id = data.get(str(q.id))
+            is_correct = False
+            correct_option = q.options.filter(is_correct=True).first()
+            if correct_option and str(correct_option.id) == str(user_answer_id):
+                score += 1
+                is_correct = True
+            results.append({
+                'question_id': q.id,
+                'is_correct': is_correct,
+                'correct_answer': correct_option.text if correct_option else "N/A"
+            })
+        
+        percentage = (score / total * 100) if total > 0 else 0
+        return JsonResponse({
+            'score': score,
+            'total': total,
+            'percentage': round(percentage, 1),
+            'results': results
+        })
+
+    return render(request, 'website/take_worksheet.html', {
+        'worksheet': worksheet,
+        'questions': questions
+    })
