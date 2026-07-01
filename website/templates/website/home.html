@@ -36,8 +36,11 @@
     </div>
     
     <div class="hero-content reveal">
-        <h1>Shaping Bright Futures, <br><em>One Student at a Time</em></h1>
-        <p>Expert 1:1 & Group Tutoring · Year 1 to Year 13 · All UK Boards<br>Customised learning plans for 11+, GCSE, A-Level, and UCAT.</p>
+        <h1 class="hero-title">Shaping Bright Futures</h1>
+        <p class="hero-subtitle">Expert 1:1 and group tutoring for Year 1 to Year 13. We build confidence, mastery, and success across all major UK boards.</p>
+        <div style="display: flex; gap: 15px; justify-content: center; margin-bottom: 30px;">
+            <a href="{% url 'syllabus_explorer' %}" class="btn-primary" style="background-color: var(--scandi-teal-dark); font-size: 1.2rem; padding: 15px 30px;"><i class="fas fa-book-reader"></i> Access Full Year 1-13 Syllabus & Past Papers</a>
+        </div>
         <div class="hero-buttons">
             <a href="#plan-builder" class="btn-primary">Build Your Custom Plan</a>
             <a href="{% url 'why_us' %}" class="btn-ghost"><i class="fas fa-play-circle"></i> Why Choose Us</a>
