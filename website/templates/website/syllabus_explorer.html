@@ -1,0 +1,133 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}Syllabus Explorer | 4JS Educational Academy{% endblock %}
+{% block content %}
+
+<section class="section" style="background: linear-gradient(135deg, var(--bg-light) 0%, #ffffff 100%); padding-top: 120px;">
+    <div class="container" style="max-width: 1200px;">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h1 style="font-size: 3rem; font-weight: 800; color: var(--text-dark);">Complete Year-Wise Syllabus & Past Papers</h1>
+            <p style="font-size: 1.2rem; color: var(--text-light); max-width: 800px; margin: 20px auto 0;">Explore the exhaustive National Curriculum from Year 1 through Year 13. Select your Year and Subject below to instantly fetch the syllabus modules and official past papers.</p>
+        </div>
+
+        <!-- Filters -->
+        <div style="background: white; padding: 30px; border-radius: 16px; box-shadow: var(--shadow-md); margin-bottom: 60px; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; align-items: flex-end;">
+            <div style="flex: 1; min-width: 200px;">
+                <label style="display: block; font-weight: 600; margin-bottom: 10px; color: var(--scandi-teal-dark);">Select Year Group</label>
+                <select id="filter-year" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-light); font-size: 1rem;">
+                    <option value="all">All Years (1-13)</option>
+                    {% for year in years %}
+                        <option value="Year {{ year }}">Year {{ year }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <label style="display: block; font-weight: 600; margin-bottom: 10px; color: var(--scandi-teal-dark);">Select Subject</label>
+                <select id="filter-subject" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border-light); font-size: 1rem;">
+                    <option value="all">All Subjects</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="English">English</option>
+                    <option value="Science">Science (Combined/Triple/Core)</option>
+                </select>
+            </div>
+            <div>
+                <button id="apply-filters" class="btn-primary" style="padding: 12px 30px; border-radius: 8px; font-size: 1rem;"><i class="fas fa-search"></i> Fetch Data</button>
+            </div>
+        </div>
+
+        <!-- Results Grid -->
+        <div id="syllabus-results">
+            {% for subject in subjects %}
+            <div class="syllabus-card" data-year="{{ subject.level }}" data-subject="{{ subject.name }}" style="background: white; border-radius: 16px; box-shadow: var(--shadow-sm); padding: 40px; margin-bottom: 40px; border: 1px solid var(--border-light);">
+                <div style="display: flex; align-items: center; gap: 15px; border-bottom: 3px solid var(--scandi-teal-dark); padding-bottom: 15px; margin-bottom: 30px;">
+                    <i class="fas fa-book-reader" style="font-size: 2.5rem; color: var(--scandi-teal-dark);"></i>
+                    <h2 style="font-size: 2rem; margin: 0; color: var(--text-dark);">{{ subject.level }} - {{ subject.name }}</h2>
+                </div>
+                
+                <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 30px;">{{ subject.description }}</p>
+
+                <!-- Modules -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 40px;">
+                    {% for module in subject.modules.all %}
+                    <div style="background: var(--off-white); padding: 24px; border-radius: 12px; border: 1px solid var(--border-light);">
+                        <h4 style="color: var(--scandi-teal-dark); margin-bottom: 12px; font-size: 1.2rem;">{{ module.title }}</h4>
+                        <ul style="list-style: none; padding: 0; color: var(--text-light); line-height: 1.8;">
+                            {% for topic in module.get_topics_list %}
+                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 8px;"></i> {{ topic }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Past Papers Table -->
+                {% if subject.past_papers.all %}
+                <div style="background: #f8faff; border: 1px solid #cce5ff; border-radius: 12px; overflow: hidden;">
+                    <div style="background: #0056b3; color: white; padding: 15px 24px; font-weight: 700; font-size: 1.2rem;">
+                        <i class="fas fa-file-pdf" style="margin-right: 10px;"></i> Past Papers Library
+                    </div>
+                    <div style="padding: 24px; overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 600px;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid #dee2e6;">
+                                    <th style="padding: 12px; color: #495057;">Board</th>
+                                    <th style="padding: 12px; color: #495057;">Year</th>
+                                    <th style="padding: 12px; color: #495057;">Paper Name</th>
+                                    <th style="padding: 12px; color: #495057;">Download</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for paper in subject.past_papers.all %}
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 12px; font-weight: 600;">{{ paper.board }}</td>
+                                    <td style="padding: 12px;">{{ paper.year }}</td>
+                                    <td style="padding: 12px;">{{ paper.paper_name }}</td>
+                                    <td style="padding: 12px;"><a href="{{ paper.link }}" target="_blank" style="color: #0056b3; text-decoration: underline;"><i class="fas fa-download"></i> PDF</a></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                {% else %}
+                <div style="padding: 15px; background: #fff3e0; border-radius: 8px; color: #e65100;">
+                    <i class="fas fa-info-circle"></i> No official past papers available for this specific year/level yet.
+                </div>
+                {% endif %}
+
+            </div>
+            {% empty %}
+            <div style="text-align: center; padding: 40px;">
+                <p>No syllabus data available in the database yet.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('apply-filters');
+    const yearSelect = document.getElementById('filter-year');
+    const subSelect = document.getElementById('filter-subject');
+    const cards = document.querySelectorAll('.syllabus-card');
+
+    btn.addEventListener('click', () => {
+        const yearVal = yearSelect.value;
+        const subVal = subSelect.value;
+
+        cards.forEach(card => {
+            const cardYear = card.getAttribute('data-year');
+            const cardSub = card.getAttribute('data-subject');
+            
+            let show = true;
+            if (yearVal !== 'all' && cardYear !== yearVal) show = false;
+            if (subVal !== 'all' && !cardSub.includes(subVal)) show = false;
+            
+            card.style.display = show ? 'block' : 'none';
+        });
+    });
+});
+</script>
+
+{% endblock %}

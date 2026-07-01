@@ -14,4 +14,5 @@ urlpatterns = [
     path('api/chatbot/', views.chatbot_query, name='chatbot_query'),
     path('worksheets/', views.worksheets_list, name='worksheets_list'),
     path('worksheets/<int:worksheet_id>/', views.take_worksheet, name='take_worksheet'),
+    path('syllabus_explorer/', views.syllabus_explorer, name='syllabus_explorer'),
 ]

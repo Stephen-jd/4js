@@ -213,6 +213,12 @@
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/taylorfit.js' %}"></script>
     <script src="{% static 'js/chatbot.js' %}"></script>
+    <script>
+        // Force redirect to home on refresh, unless already on home
+        if (window.location.pathname !== '/' && performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+            window.location.href = '/';
+        }
+    </script>
     
     {% block extra_scripts %}{% endblock %}
 </body>

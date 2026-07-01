@@ -181,3 +181,11 @@ def take_worksheet(request, worksheet_id):
         'worksheet': worksheet,
         'questions': questions
     })
+
+
+from website.models import SyllabusSubject
+
+def syllabus_explorer(request):
+    subjects = SyllabusSubject.objects.prefetch_related('modules', 'past_papers').all()
+    years = list(range(1, 14))
+    return render(request, 'website/syllabus_explorer.html', {'subjects': subjects, 'years': years})
