@@ -269,12 +269,13 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
-.particles-logo h2 {
+.navbar-brand-text {
   font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  font-weight: 700;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 800;
   color: var(--black);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
 .particles-logo p {
@@ -2346,7 +2347,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   html, body {
     overflow-x: hidden !important;
     width: 100%;
