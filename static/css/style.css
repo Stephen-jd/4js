@@ -322,29 +322,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: var(--scandi-teal-dark);
-    text-decoration: none;
-    letter-spacing: -0.5px;
-    animation: pulse-zoom 3s infinite ease-in-out;
-}
-
-@keyframes pulse-zoom {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-}
   display: flex;
   align-items: center;
   gap: 10px;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.4rem; /* Increased font size for logo text */
   color: var(--black);
   white-space: nowrap;
 }
@@ -374,7 +357,7 @@ h1, h2, h3, h4, h5, h6 {
   gap: 4px;
   padding: 8px 14px;
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 1.1rem; /* Increased font size for better readability */
   font-weight: 500;
   color: var(--text);
   border-radius: var(--radius-sm);
