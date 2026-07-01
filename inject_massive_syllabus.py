@@ -1,74 +1,8 @@
-{% extends 'website/base.html' %}
-{% load static %}
-{% block title %}GCSE Tuition | 4JS Educational Academy{% endblock %}
-{% block content %}
-<!-- Hero Section -->
-<section style="background: linear-gradient(135deg, var(--bg-light) 0%, #ffffff 100%); padding: 160px 24px 80px; text-align: center; position: relative; overflow: hidden;">
-    <div class="container fade-up">
-        <span class="section-label" style="display: inline-block; margin-bottom: 16px;">Key Stage 4 (Years 10 & 11)</span>
-        <h1 style="font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 24px; letter-spacing: -1px;">
-            Master Your GCSEs.<br><span class="accent">Unlock Your Future.</span>
-        </h1>
-        <p style="font-size: 1.25rem; color: var(--text-light); max-width: 600px; margin: 0 auto 40px;">
-            The jump to GCSE is significant. Our intensive 1:1 tuition covers all major UK exam boards, turning overwhelming syllabuses into manageable, structured, and achievable goals.
-        </p>
-        <div style="display: flex; gap: 16px; justify-content: center;">
-            <a href="{% url 'home' %}#plan-builder" class="btn-primary" style="padding: 16px 32px; font-size: 1.1rem; border-radius: 50px;">Start Custom Plan</a>
-            <a href="#subjects" class="btn-ghost" style="padding: 16px 32px; font-size: 1.1rem; border-radius: 50px;">View Subjects</a>
-        </div>
-    </div>
-    
-    <div class="scale-in" style="max-width: 1000px; margin: 60px auto 0; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg);">
-        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80" alt="GCSE Study" style="width: 100%; height: auto; display: block;">
-    </div>
-</section>
+import os
 
-<!-- Subject Breakdown Section -->
-<section id="subjects" class="section">
-    <div class="container">
-        <div class="fade-up" style="text-align: center; margin-bottom: 60px;">
-            <h2 class="heading-md">Comprehensive Subject Coverage</h2>
-            <p class="text-light" style="max-width: 600px; margin: 16px auto 0;">We support all major exam boards: AQA, Edexcel, OCR, WJEC, and CIE.</p>
-        </div>
+gcse_path = "c:/Users/steph/Downloads/theos/website/templates/website/gcse.html"
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px;">
-            
-            <!-- Core Subject: Maths -->
-            <div class="fade-up" style="background: var(--white); padding: 40px; border-radius: 24px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
-                <div style="width: 60px; height: 60px; background: var(--bg-light); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--accent); margin-bottom: 24px;">
-                    <i class="fas fa-square-root-alt"></i>
-                </div>
-                <h3 style="font-size: 1.5rem; margin-bottom: 16px;">Mathematics</h3>
-                <p style="color: var(--text-light); margin-bottom: 20px;">From foundational arithmetic to advanced algebra and trigonometry. We ensure students can tackle both paper 1 (non-calculator) and paper 2/3 with confidence.</p>
-                <a href="https://wa.me/447534715058?text=I%20would%20like%20to%20book%20a%20GCSE%20Maths%20Tutor" style="color: var(--accent); font-weight: 600;" target="_blank">Book Maths Tutor <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
-            </div>
-
-            <!-- Core Subject: Science -->
-            <div class="fade-up" style="background: var(--white); padding: 40px; border-radius: 24px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
-                <div style="width: 60px; height: 60px; background: var(--bg-light); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--accent); margin-bottom: 24px;">
-                    <i class="fas fa-flask"></i>
-                </div>
-                <h3 style="font-size: 1.5rem; margin-bottom: 16px;">Triple & Combined Science</h3>
-                <p style="color: var(--text-light); margin-bottom: 20px;">In-depth coverage of Biology, Chemistry, and Physics. We focus heavily on practical methodology questions and long-form 6-mark answers.</p>
-                <a href="https://wa.me/447534715058?text=I%20would%20like%20to%20book%20a%20GCSE%20Science%20Tutor" style="color: var(--accent); font-weight: 600;" target="_blank">Book Science Tutor <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
-            </div>
-
-            <!-- Core Subject: English -->
-            <div class="fade-up" style="background: var(--white); padding: 40px; border-radius: 24px; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
-                <div style="width: 60px; height: 60px; background: var(--bg-light); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: var(--accent); margin-bottom: 24px;">
-                    <i class="fas fa-book-open"></i>
-                </div>
-                <h3 style="font-size: 1.5rem; margin-bottom: 16px;">English Lang & Lit</h3>
-                <p style="color: var(--text-light); margin-bottom: 20px;">Mastering unseen poetry, Shakespeare, modern texts, and creative writing. We teach the specific PEE/PEEL structures examiners look for.</p>
-                <a href="https://wa.me/447534715058?text=I%20would%20like%20to%20book%20a%20GCSE%20English%20Tutor" style="color: var(--accent); font-weight: 600;" target="_blank">Book English Tutor <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
-            </div>
-            
-        </div>
-    </div>
-</section>
-
-
-
+detailed_syllabus = """
 <!-- Detailed Syllabus Sections -->
 <section class="section" style="background: #fdfdfd;">
     <div class="container" style="max-width: 1000px;">
@@ -319,33 +253,19 @@
         </div>
     </div>
 </section>
+"""
 
-<!-- Mock Exam Section -->
-<section class="section section--alt">
-    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
-        <div class="scale-in">
-            <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80" alt="Exams" style="width: 100%; border-radius: 24px; box-shadow: var(--shadow-md);">
-        </div>
-        <div class="fade-up">
-            <h2 class="heading-md" style="margin-bottom: 24px;">Unlimited Mock Tests</h2>
-            <p class="text-light" style="font-size: 1.1rem; margin-bottom: 24px;">Knowledge is only half the battle; the other half is exam technique. Many students know the material but lose marks due to poor time management or misreading the question.</p>
-            <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
-                <li style="display: flex; align-items: flex-start; gap: 12px;">
-                    <i class="fas fa-stopwatch" style="color: var(--accent); font-size: 1.5rem; margin-top: 4px;"></i>
-                    <div>
-                        <strong style="display: block; margin-bottom: 4px;">Timed Conditions</strong>
-                        <span style="color: var(--text-light);">We simulate real exam environments to reduce anxiety and build stamina.</span>
-                    </div>
-                </li>
-                <li style="display: flex; align-items: flex-start; gap: 12px;">
-                    <i class="fas fa-clipboard-list" style="color: var(--accent); font-size: 1.5rem; margin-top: 4px;"></i>
-                    <div>
-                        <strong style="display: block; margin-bottom: 4px;">Examiner's Perspective</strong>
-                        <span style="color: var(--text-light);">Tutors mark papers using official mark schemes, showing exactly where points are dropped.</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-{% endblock %}
+with open(gcse_path, 'r', encoding='utf-8') as f:
+    content = f.read()
+
+# We need to replace the old detailed syllabus block.
+# The old one started with '<!-- Detailed Syllabus Sections -->' and ended with '<!-- Mock Exam Section -->'
+if '<!-- Detailed Syllabus Sections -->' in content and '<!-- Mock Exam Section -->' in content:
+    start_idx = content.find('<!-- Detailed Syllabus Sections -->')
+    end_idx = content.find('<!-- Mock Exam Section -->')
+    new_content = content[:start_idx] + detailed_syllabus + '\n' + content[end_idx:]
+    with open(gcse_path, 'w', encoding='utf-8') as f:
+        f.write(new_content)
+        print("Updated GCSE syllabus successfully.")
+else:
+    print("Could not find syllabus markers.")
