@@ -312,12 +312,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-inner {
-  max-width: var(--container-wide);
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
+  padding: 0 5%;
   height: 72px;
 }
 
