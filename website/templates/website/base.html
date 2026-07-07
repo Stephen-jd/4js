@@ -23,10 +23,9 @@
     <!-- 1. Navigation Bar -->
     <nav class="navbar">
         <div class="navbar-inner">
-            <a href="{% url 'home' %}" class="navbar-logo">
-                <img src="{% static 'images/logo.png' %}" alt="4JS Logo">
-                4JS Educational Academy
-            <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-light); margin-left: 8px;">Striving for Distinction</span></a>
+            <a href="{% url 'home' %}" class="navbar-logo" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="{% static 'images/logo.png' %}" alt="4JS Logo" class="zoom-pulse-logo" style="height: 60px; max-height: 100%; margin: 0; padding: 0;">
+            </a>
 
             <!-- Desktop Menu -->
             <ul class="navbar-menu">
@@ -148,63 +147,11 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container-wide">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3><img src="{% static 'images/logo.png' %}" alt="4JS Logo" style="height: 40px; display: inline-block; vertical-align: middle; margin-right: 10px;">4JS</h3>
-                    <p>"Shaping Bright Futures, One Student at a Time"</p>
-                    <div class="footer-contact-item"><i class="fas fa-envelope"></i> 4jseducationalacademy@gmail.com</div>
-                    <div class="footer-contact-item"><i class="fas fa-phone"></i> +44 7534 715058</div>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Programmes</h4>
-                    <a href="{% url 'primary' %}">Primary (KS1-KS2)</a>
-                    <a href="{% url 'secondary' %}">Secondary (KS3-KS4)</a>
-                    <a href="{% url 'gcse' %}">GCSE Tuition</a>
-                    <a href="{% url 'alevel' %}">A-Level Coaching</a>
-                    <a href="{% url 'entrance_exams' %}#11plus">11+ Preparation</a>
-                    <a href="{% url 'entrance_exams' %}#ucat">UCAT & Medicine</a>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Exam Boards</h4>
-                    <a href="{% url 'gcse' %}#subjects">AQA</a>
-                    <a href="{% url 'gcse' %}#subjects">Edexcel</a>
-                    <a href="{% url 'gcse' %}#subjects">OCR</a>
-                    <a href="{% url 'gcse' %}#subjects">CIE / Cambridge</a>
-                    <a href="{% url 'gcse' %}#subjects">WJEC</a>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Key Stages</h4>
-                    <a href="{% url 'primary' %}#ks1">Key Stage 1 (Y1-Y2)</a>
-                    <a href="{% url 'primary' %}#ks2">Key Stage 2 (Y3-Y6)</a>
-                    <a href="{% url 'secondary' %}">Key Stage 3 (Y7-Y9)</a>
-                    <a href="{% url 'gcse' %}">Key Stage 4 (Y10-11)</a>
-                    <a href="{% url 'alevel' %}">Key Stage 5 (Y12-13)</a>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>Support & Legal</h4>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Safeguarding Policy</a>
-                    <a href="#">Cookie Policy</a>
-                    <a href="#">Accessibility</a>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 4JS Educational Academy Ltd. Registered in England & Wales. All Rights Reserved.</p>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/4js_edu?igsh=OGdvM3Q2c295ejN3" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://wa.me/447534715058" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
+    <footer class="footer" style="padding: 20px 0; background-color: var(--primary-color); color: white; text-align: center;">
+        <div class="container-wide" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
+            <p style="margin: 0; font-size: 1.1rem;">&copy; 4JS Educational Academy</p>
+            <p style="margin: 0; font-size: 0.9rem;">Designed and developed by SJD</p>
+            <a href="#" style="color: white; text-decoration: underline; font-size: 0.9rem;">Terms and Conditions</a>
         </div>
     </footer>
 

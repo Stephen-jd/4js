@@ -2421,3 +2421,33 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 24px;
   }
 }
+
+/* Logo Zoom Pulse Animation */
+.zoom-pulse-logo {
+    animation: zoomPulse 4s infinite alternate ease-in-out;
+    transform-origin: center;
+}
+
+@keyframes zoomPulse {
+    0% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Ensure mobile menu works well */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--bg-light);
+    padding: 20px;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    z-index: 1000;
+}
+.mobile-menu.active {
+    display: flex;
+}
