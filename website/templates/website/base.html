@@ -81,7 +81,8 @@
                     </div>
                 </li>
                 <li class="navbar-item">
-                    <a href="{% url 'entrance_exams' %}" class="navbar-link">Entrance Exams <i class="fas fa-chevron-down chevron"></i></a>
+                    <a href="/#programmes" class="navbar-link">Programmes</a>
+                    <a href="/#courses" class="navbar-link">Entrance Exams <i class="fas fa-chevron-down chevron"></i></a>
                     <div class="navbar-dropdown">
                         <a href="{% url 'entrance_exams' %}#11plus" class="dropdown-link">11+ Grammar Prep</a>
                         <a href="{% url 'entrance_exams' %}#13plus" class="dropdown-link">12+ / 13+ Entry</a>
@@ -115,7 +116,8 @@
             <a href="{% url 'alevel' %}" class="mobile-menu-link">A-Level</a>
         </div>
         <div class="mobile-menu-item">
-            <a href="{% url 'entrance_exams' %}" class="mobile-menu-link">Entrance Exams</a>
+            <a href="/#programmes" class="mobile-menu-link" onclick="toggleMenu()">Programmes</a>
+            <a href="/#courses" class="mobile-menu-link" onclick="toggleMenu()">Entrance Exams</a>
         </div>
         <div class="mobile-menu-item" style="margin-top: 20px; border: none;">
             <a href="{% url 'home' %}#plan-builder" class="btn-primary" style="width: 100%; justify-content: center;">Custom Study Plan Builder</a>
