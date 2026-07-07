@@ -4,9 +4,9 @@
 {% block particle_overlay %}
 <div id="particles-overlay">
     <canvas id="particles-canvas"></canvas>
-    <div class="particles-logo">
-        <h2>4JS Educational Academy</h2>
-        <p>Shaping Bright Futures</p>
+    <div class="particles-logo" style="display: flex; flex-direction: column; align-items: center;">
+        <img src="{% static 'images/logo.png' %}" alt="4JS Logo" class="zoom-pulse-logo" style="height: 180px; margin-bottom: -15px;">
+        <p style="margin-top: 0;">Shaping Bright Futures</p>
     </div>
 </div>
 {% endblock %}
