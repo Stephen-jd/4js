@@ -1063,28 +1063,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Review Modal */
-#particles-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: var(--bg-light);
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.8s ease;
-  pointer-events: none;
-  /* Fallback to hide overlay if JS fails */
-  animation: forceHideOverlay 3.5s forwards;
-}
-
-@keyframes forceHideOverlay {
-  0%, 90% { opacity: 1; visibility: visible; }
-  100% { opacity: 0; visibility: hidden; }
-}
-
 .review-modal-overlay {
   position: fixed;
   top: 0;
