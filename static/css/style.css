@@ -2437,17 +2437,3 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Ensure mobile menu works well */
-.mobile-menu {
-    display: none;
-    flex-direction: column;
-    background-color: var(--bg-light);
-    padding: 20px;
-    position: absolute;
-    top: 70px;
-    width: 100%;
-    z-index: 1000;
-}
-.mobile-menu.active {
-    display: flex;
-}
