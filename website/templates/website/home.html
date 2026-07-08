@@ -6,7 +6,7 @@
     <canvas id="particles-canvas"></canvas>
     <div class="particles-logo" style="display: flex; flex-direction: column; align-items: center;">
         <img src="{% static 'images/logo.png' %}" alt="4JS Logo" class="zoom-pulse-logo" style="height: 180px; margin-bottom: -15px;">
-        <p style="margin-top: 0;">Shaping Bright Futures</p>
+        <p style="margin-top: 0; color: white;">Striving for Distinction</p>
     </div>
 </div>
 {% endblock %}
@@ -36,7 +36,7 @@
     </div>
     
     <div class="hero-content reveal">
-        <h1 class="hero-title">Shaping Bright Futures</h1>
+        <h1 class="hero-title">Striving for Distinction</h1>
         <p class="hero-subtitle">Expert 1:1 and group tutoring for Year 1 to Year 13. We build confidence, mastery, and success across all major UK boards.</p>
         <div style="display: flex; gap: 15px; justify-content: center; margin-bottom: 30px;">
             <a href="{% url 'syllabus_explorer' %}" class="btn-primary" style="background-color: var(--scandi-teal-dark); font-size: 1.2rem; padding: 15px 30px;"><i class="fas fa-book-reader"></i> Syllabus Explorer</a>
@@ -66,7 +66,7 @@
 <section class="trust-bar">
     <div class="container-wide trust-grid stagger">
         <div class="trust-item">
-            <div class="trust-number" data-count="500" data-suffix="+">0</div>
+            <div class="trust-number" data-count="690" data-suffix="+">0</div>
             <div class="trust-label">Students Taught</div>
         </div>
         <div class="trust-item">
@@ -80,6 +80,49 @@
         <div class="trust-item">
             <div class="trust-number">All</div>
             <div class="trust-label">Major UK Boards</div>
+        </div>
+    </div>
+</section>
+
+<!-- NEW SECTION: Programmes Offered -->
+<section class="section" id="programmes" style="background-color: #fafafa; padding: 60px 0;">
+    <div class="container">
+        <div class="section-header reveal" style="text-align: center; margin-bottom: 50px;">
+            <span class="section-label" style="color: var(--scandi-teal-dark); text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; font-weight: 700;">What We Teach</span>
+            <h2 class="heading-md section-title" style="color: var(--black); font-size: 2.5rem; margin: 10px 0;">Programmes Offered</h2>
+            <p class="section-subtitle" style="color: #666; max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Tailored education pathways designed to help every student reach their maximum potential.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <!-- Primary Education -->
+            <div style="background: white; padding: 40px; border-radius: 16px; box-shadow: 0 15px 40px rgba(0,0,0,0.06); display: flex; flex-direction: column;">
+                <h3 style="margin-bottom: 20px; color: var(--black); font-size: 1.5rem; font-weight: 700;">Primary Education</h3>
+                <ul style="list-style: none; padding: 0; color: #444; flex-grow: 1; font-size: 1.05rem;">
+                    <li style="margin-bottom: 15px; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--black); margin-right: 12px; font-size: 0.9rem;"></i> Key Stage 1 & 2 Core Subjects</li>
+                    <li style="margin-bottom: 15px; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--black); margin-right: 12px; font-size: 0.9rem;"></i> SATs Preparation</li>
+                    <li style="margin-bottom: 15px; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--black); margin-right: 12px; font-size: 0.9rem;"></i> 11+ Grammar School Entry</li>
+                </ul>
+                <a href="#contact" class="btn-primary" style="background-color: white; color: var(--black); border: 2px solid #eee; margin-top: 30px; text-align: center; justify-content: center; width: 100%; border-radius: 50px; font-weight: 600; padding: 12px 0; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">Book a Slot</a>
+            </div>
+            <!-- Secondary Education -->
+            <div style="background: white; padding: 40px; border-radius: 16px; box-shadow: 0 15px 40px rgba(0,0,0,0.06); border-top: 5px solid var(--scandi-teal-dark); display: flex; flex-direction: column;">
+                <h3 style="margin-bottom: 20px; color: var(--black); font-size: 1.5rem; font-weight: 700;">Secondary Education</h3>
+                <ul style="list-style: none; padding: 0; color: #444; flex-grow: 1; font-size: 1.05rem;">
+                    <li style="margin-bottom: 15px; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--scandi-teal-light); margin-right: 12px; font-size: 0.9rem;"></i> Key Stage 3 Foundations</li>
+                    <li style="margin-bottom: 15px; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--scandi-teal-light); margin-right: 12px; font-size: 0.9rem;"></i> Comprehensive GCSE Prep</li>
+                    <li style="margin-bottom: 15px; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--scandi-teal-light); margin-right: 12px; font-size: 0.9rem;"></i> Triple Science & Options</li>
+                </ul>
+                <a href="#contact" class="btn-primary" style="background-color: var(--scandi-teal-dark); color: white; margin-top: 30px; text-align: center; justify-content: center; width: 100%; border-radius: 50px; font-weight: 600; padding: 12px 0; transition: 0.3s;">Book a Slot</a>
+            </div>
+            <!-- A-Level & Medicine -->
+            <div style="background: white; padding: 40px; border-radius: 16px; box-shadow: 0 15px 40px rgba(0,0,0,0.06); border-top: 5px solid var(--black); display: flex; flex-direction: column;">
+                <h3 style="margin-bottom: 20px; color: var(--black); font-size: 1.5rem; font-weight: 700;">A-Level & Medicine</h3>
+                <ul style="list-style: none; padding: 0; color: #444; flex-grow: 1; font-size: 1.05rem;">
+                    <li style="margin-bottom: 15px; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--black); margin-right: 12px; font-size: 0.9rem;"></i> A-Level Mathematics & Science</li>
+                    <li style="margin-bottom: 15px; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--black); margin-right: 12px; font-size: 0.9rem;"></i> UCAT & Medicine Pathway</li>
+                    <li style="margin-bottom: 15px; display: flex; align-items: center;"><i class="fas fa-check" style="color: var(--black); margin-right: 12px; font-size: 0.9rem;"></i> University Interview Prep</li>
+                </ul>
+                <a href="#contact" class="btn-primary" style="background-color: var(--black); color: white; margin-top: 30px; text-align: center; justify-content: center; width: 100%; border-radius: 50px; font-weight: 600; padding: 12px 0; transition: 0.3s;">Book a Slot</a>
+            </div>
         </div>
     </div>
 </section>
@@ -418,46 +461,6 @@
                 <div class="review-card" style="padding:0; overflow:hidden; display:flex; align-items:center; justify-content:center; background:#f0f0f0; height:300px; border: 2px dashed #ccc;">
                     <p style="color: #666; font-weight: bold; text-align: center; padding: 20px;">[11+ Photo 4]<br><br>Waiting for image upload...</p>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- NEW SECTION: Programmes Offered -->
-<section class="section section--alt" id="programmes">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="section-label">What We Teach</span>
-            <h2 class="heading-md section-title">Programmes Offered</h2>
-            <p class="section-subtitle">Tailored education pathways designed to help every student reach their maximum potential.</p>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--accent); display: flex; flex-direction: column;">
-                <h3 style="margin-bottom: 15px; color: var(--black); font-size: 1.5rem;">Primary Education</h3>
-                <ul style="list-style: none; padding: 0; color: var(--text-dark); flex-grow: 1;">
-                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i> Key Stage 1 & 2 Core Subjects</li>
-                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i> SATs Preparation</li>
-                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--accent); margin-right: 10px;"></i> 11+ Grammar School Entry</li>
-                </ul>
-                <a href="#contact" class="btn-primary" style="margin-top: 20px; text-align: center; justify-content: center;">Book a Slot</a>
-            </div>
-            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--scandi-teal-dark); display: flex; flex-direction: column;">
-                <h3 style="margin-bottom: 15px; color: var(--black); font-size: 1.5rem;">Secondary Education</h3>
-                <ul style="list-style: none; padding: 0; color: var(--text-dark); flex-grow: 1;">
-                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--scandi-teal-dark); margin-right: 10px;"></i> Key Stage 3 Foundations</li>
-                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--scandi-teal-dark); margin-right: 10px;"></i> Comprehensive GCSE Prep</li>
-                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--scandi-teal-dark); margin-right: 10px;"></i> Triple Science & Options</li>
-                </ul>
-                <a href="#contact" class="btn-primary" style="background-color: var(--scandi-teal-dark); margin-top: 20px; text-align: center; justify-content: center;">Book a Slot</a>
-            </div>
-            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-top: 5px solid var(--black); display: flex; flex-direction: column;">
-                <h3 style="margin-bottom: 15px; color: var(--black); font-size: 1.5rem;">A-Level & Medicine</h3>
-                <ul style="list-style: none; padding: 0; color: var(--text-dark); flex-grow: 1;">
-                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--black); margin-right: 10px;"></i> A-Level Mathematics & Science</li>
-                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--black); margin-right: 10px;"></i> UCAT & Medicine Pathway</li>
-                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--black); margin-right: 10px;"></i> University Interview Prep</li>
-                </ul>
-                <a href="#contact" class="btn-primary" style="background-color: var(--black); margin-top: 20px; text-align: center; justify-content: center;">Book a Slot</a>
             </div>
         </div>
     </div>
