@@ -483,14 +483,38 @@
                 <button class="exam-tab-btn" onclick="switchExamTab('ucat')" style="background-color: #2a2a35; color: #aaa; border: none; padding: 12px 24px; border-radius: 8px; font-weight: bold; cursor: pointer; transition: 0.3s;">UCAT & Medicine</button>
             </div>
 
+<style>
+            @keyframes colorfulSlideIn {
+                0% { opacity: 0; transform: translateX(-20px); filter: hue-rotate(45deg); }
+                100% { opacity: 1; transform: translateX(0); filter: hue-rotate(0deg); }
+            }
+            .active-tab-animation {
+                animation: colorfulSlideIn 0.5s ease-out forwards;
+            }
+            .exam-data-box {
+                background: rgba(102,178,255,0.05); border: 1px solid rgba(102,178,255,0.2); border-left: 4px solid var(--accent); padding: 15px; margin-bottom: 25px; border-radius: 8px; color: #ddd; font-size: 0.95rem; line-height: 1.6;
+            }
+            .exam-data-box strong { color: white; }
+            .grid-4-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
+            .stat-box { background: #2a2a35; padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 15px; transition: transform 0.3s; }
+            .stat-box:hover { transform: translateY(-3px); border: 1px solid rgba(102,178,255,0.3); }
+            </style>
+
             <!-- Tab Content: 11+ -->
-            <div id="tab-11plus" class="exam-tab-content" style="display: flex; gap: 40px; flex-wrap: wrap;">
+            <div id="tab-11plus" class="exam-tab-content active-tab-animation" style="display: flex; gap: 40px; flex-wrap: wrap;">
                 <div class="exam-info" style="flex: 1; min-width: 300px;">
-                    <h3 style="color: white; font-size: 2rem; margin-bottom: 10px;">11+ Grammar School Entrance Program</h3>
-                    <p style="color: var(--accent); font-weight: bold; margin-bottom: 20px;">(High Success Rate)</p>
-                    <p style="color: #ccc; margin-bottom: 30px;">Master Verbal Reasoning, Non-Verbal Reasoning, Maths, and English to secure your place in a top grammar school.</p>
+                    <h3 style="color: white; font-size: 2rem; margin-bottom: 5px;">11+ Grammar School Entrance Program</h3>
+                    <p style="color: var(--accent); font-weight: bold; margin-bottom: 15px;">(High Success Rate)</p>
+                    <p style="color: #ccc; margin-bottom: 20px;">Master Verbal Reasoning, Non-Verbal Reasoning, Maths, and English to secure your place in a top grammar school.</p>
                     
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; color: #ddd; margin-bottom: 40px;">
+                    <div class="exam-data-box">
+                        <strong><i class="fas fa-chart-line" style="color: var(--accent); margin-right: 5px;"></i> Cutoff Details:</strong> Target Score: 110-120+ per paper (typically top 20-25% of candidates or ~80%+ raw score).<br>
+                        <strong><i class="fas fa-stopwatch" style="color: var(--accent); margin-right: 5px;"></i> Paper Breakup:</strong><br>
+                        • <em>Maths & NVR:</em> 45-50 mins (~80 questions).<br>
+                        • <em>English & VR:</em> 45-50 mins (~80 questions).
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; color: #ddd; margin-bottom: 30px;">
                         <div><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Verbal Reasoning</div>
                         <div><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Non-Verbal Reasoning</div>
                         <div><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Advanced Maths</div>
@@ -499,20 +523,20 @@
                         <div><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Interview Prep</div>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 40px;">
-                        <div style="background: #2a2a35; padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 15px;">
+                    <div class="grid-4-stats">
+                        <div class="stat-box">
                             <i class="fas fa-calendar-alt" style="color: var(--scandi-teal-dark); font-size: 1.5rem;"></i>
-                            <div style="color: white;">10 Months</div>
+                            <div style="color: white;">60 Days</div>
                         </div>
-                        <div style="background: #2a2a35; padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 15px;">
+                        <div class="stat-box">
                             <i class="fas fa-file-signature" style="color: var(--scandi-teal-dark); font-size: 1.5rem;"></i>
                             <div style="color: white;">20+ Mock Tests</div>
                         </div>
-                        <div style="background: #2a2a35; padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 15px;">
+                        <div class="stat-box">
                             <i class="fas fa-laptop-house" style="color: var(--scandi-teal-dark); font-size: 1.5rem;"></i>
                             <div style="color: white;">Online & Offline</div>
                         </div>
-                        <div style="background: #2a2a35; padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 15px;">
+                        <div class="stat-box">
                             <i class="fas fa-book-reader" style="color: var(--scandi-teal-dark); font-size: 1.5rem;"></i>
                             <div style="color: white;">24/7 Portal Access</div>
                         </div>
@@ -520,49 +544,116 @@
 
                     <div style="display: flex; gap: 15px;">
                         <a href="/#contact" style="background-color: var(--accent); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; flex: 1; text-align: center;"><i class="fas fa-play" style="margin-right: 8px;"></i> Book Free Demo</a>
-                        <a href="#" style="background-color: transparent; border: 2px solid var(--scandi-teal-dark); color: var(--scandi-teal-dark); padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; flex: 1; text-align: center;"><i class="fas fa-download" style="margin-right: 8px;"></i> Download Syllabus</a>
+                        <a href="#" style="background-color: transparent; border: 2px solid var(--scandi-teal-dark); color: var(--scandi-teal-dark); padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; flex: 1; text-align: center;"><i class="fas fa-download" style="margin-right: 8px;"></i> Download Sample Paper</a>
                     </div>
                 </div>
-                <div class="exam-image" style="flex: 1; min-width: 300px; background: #2a2a35; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
-                    <img src="/static/images/courses/course_primary.png" alt="11+ Prep" style="max-width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <div class="exam-image" style="flex: 1; min-width: 300px; background: #2a2a35; border-radius: 12px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                    <img src="/static/images/courses/course_primary.png" alt="11+ Prep" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                 </div>
             </div>
 
             <!-- Tab Content: 12+ -->
             <div id="tab-12plus" class="exam-tab-content" style="display: none; gap: 40px; flex-wrap: wrap;">
                 <div class="exam-info" style="flex: 1; min-width: 300px;">
-                    <h3 style="color: white; font-size: 2rem; margin-bottom: 10px;">12+ / 13+ Late Entry Program</h3>
-                    <p style="color: var(--accent); font-weight: bold; margin-bottom: 20px;">(Bespoke Preparation)</p>
-                    <p style="color: #ccc; margin-bottom: 30px;">Highly targeted tutoring for late grammar school entry or independent school scholarships.</p>
+                    <h3 style="color: white; font-size: 2rem; margin-bottom: 5px;">12+ / 13+ Late Entry Program</h3>
+                    <p style="color: var(--accent); font-weight: bold; margin-bottom: 15px;">(Bespoke Preparation)</p>
+                    <p style="color: #ccc; margin-bottom: 20px;">Highly targeted tutoring for late grammar school entry or independent school scholarships.</p>
                     
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; color: #ddd; margin-bottom: 40px;">
+                    <div class="exam-data-box">
+                        <strong><i class="fas fa-chart-line" style="color: var(--accent); margin-right: 5px;"></i> Cutoff Details:</strong> Highly competitive (Typically 75-80%+ raw score required due to limited seats).<br>
+                        <strong><i class="fas fa-stopwatch" style="color: var(--accent); margin-right: 5px;"></i> Paper Breakup:</strong><br>
+                        • <em>Maths:</em> 60 mins (Standard & Advanced).<br>
+                        • <em>English:</em> 60 mins (Comprehension & Creative Writing).<br>
+                        • <em>Science/Reasoning:</em> 45-60 mins (School-dependent).
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; color: #ddd; margin-bottom: 30px;">
                         <div><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Subject-Specific Focus</div>
                         <div><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Exam Technique</div>
                         <div><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Scholarship Prep</div>
+                        <div><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Advanced Science</div>
+                        <div><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Mock Interviews</div>
+                        <div><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Past Paper Drills</div>
+                    </div>
+
+                    <div class="grid-4-stats">
+                        <div class="stat-box">
+                            <i class="fas fa-calendar-alt" style="color: var(--scandi-teal-dark); font-size: 1.5rem;"></i>
+                            <div style="color: white;">60 Days</div>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-file-signature" style="color: var(--scandi-teal-dark); font-size: 1.5rem;"></i>
+                            <div style="color: white;">15+ Mock Tests</div>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-laptop-house" style="color: var(--scandi-teal-dark); font-size: 1.5rem;"></i>
+                            <div style="color: white;">Online & Offline</div>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-book-reader" style="color: var(--scandi-teal-dark); font-size: 1.5rem;"></i>
+                            <div style="color: white;">24/7 Portal Access</div>
+                        </div>
                     </div>
                     
                     <div style="display: flex; gap: 15px;">
                         <a href="/#contact" style="background-color: var(--accent); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; flex: 1; text-align: center;"><i class="fas fa-play" style="margin-right: 8px;"></i> Book Free Demo</a>
+                        <a href="#" style="background-color: transparent; border: 2px solid var(--scandi-teal-dark); color: var(--scandi-teal-dark); padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; flex: 1; text-align: center;"><i class="fas fa-download" style="margin-right: 8px;"></i> Download Sample Paper</a>
                     </div>
+                </div>
+                <div class="exam-image" style="flex: 1; min-width: 300px; background: #2a2a35; border-radius: 12px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                    <img src="/static/images/courses/course_secondary.png" alt="12+ Prep" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                 </div>
             </div>
 
             <!-- Tab Content: UCAT -->
             <div id="tab-ucat" class="exam-tab-content" style="display: none; gap: 40px; flex-wrap: wrap;">
                 <div class="exam-info" style="flex: 1; min-width: 300px;">
-                    <h3 style="color: white; font-size: 2rem; margin-bottom: 10px;">UCAT & Medical Pathway Program</h3>
-                    <p style="color: var(--accent); font-weight: bold; margin-bottom: 20px;">(Top Percentile Target)</p>
-                    <p style="color: #ccc; margin-bottom: 30px;">Intensive training for Verbal Reasoning, Decision Making, Quantitative Reasoning, Abstract Reasoning, and Situational Judgement.</p>
+                    <h3 style="color: white; font-size: 2rem; margin-bottom: 5px;">UCAT & Medical Pathway Program</h3>
+                    <p style="color: var(--accent); font-weight: bold; margin-bottom: 15px;">(Top Percentile Target)</p>
+                    <p style="color: #ccc; margin-bottom: 20px;">Intensive training for Verbal Reasoning, Decision Making, Quantitative Reasoning, Abstract Reasoning, and Situational Judgement.</p>
                     
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; color: #ddd; margin-bottom: 40px;">
+                    <div class="exam-data-box">
+                        <strong><i class="fas fa-chart-line" style="color: var(--accent); margin-right: 5px;"></i> Cutoff Details:</strong> Target Score: 2800+ / 3600 (Top 10-20% percentile). Band 1 or 2 required for SJT.<br>
+                        <strong><i class="fas fa-stopwatch" style="color: var(--accent); margin-right: 5px;"></i> Paper Breakup (2 Hours):</strong><br>
+                        • <em>VR:</em> 21m (44q) | <em>DM:</em> 31m (29q) | <em>QR:</em> 25m (36q)<br>
+                        • <em>AR:</em> 12m (50q) | <em>SJT:</em> 26m (69q)
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; color: #ddd; margin-bottom: 30px;">
                         <div><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> All 5 Subtests Covered</div>
                         <div><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Speed & Accuracy Training</div>
                         <div><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> MMI Interview Prep</div>
+                        <div><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Personal Statement Help</div>
+                        <div><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Medicine Application</div>
+                        <div><i class="fas fa-check-circle" style="color: var(--accent); margin-right: 8px;"></i> Computer-based Drills</div>
+                    </div>
+
+                    <div class="grid-4-stats">
+                        <div class="stat-box">
+                            <i class="fas fa-calendar-alt" style="color: var(--scandi-teal-dark); font-size: 1.5rem;"></i>
+                            <div style="color: white;">60 Days</div>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-file-signature" style="color: var(--scandi-teal-dark); font-size: 1.5rem;"></i>
+                            <div style="color: white;">10+ Full Mocks</div>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-laptop-house" style="color: var(--scandi-teal-dark); font-size: 1.5rem;"></i>
+                            <div style="color: white;">Online & Offline</div>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-book-reader" style="color: var(--scandi-teal-dark); font-size: 1.5rem;"></i>
+                            <div style="color: white;">24/7 Portal Access</div>
+                        </div>
                     </div>
                     
                     <div style="display: flex; gap: 15px;">
                         <a href="/#contact" style="background-color: var(--accent); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; flex: 1; text-align: center;"><i class="fas fa-play" style="margin-right: 8px;"></i> Book Free Demo</a>
+                        <a href="#" style="background-color: transparent; border: 2px solid var(--scandi-teal-dark); color: var(--scandi-teal-dark); padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; flex: 1; text-align: center;"><i class="fas fa-download" style="margin-right: 8px;"></i> Download Sample Paper</a>
                     </div>
+                </div>
+                <div class="exam-image" style="flex: 1; min-width: 300px; background: #2a2a35; border-radius: 12px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+                    <img src="/static/images/courses/course_alevel.png" alt="UCAT Prep" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                 </div>
             </div>
 
@@ -572,16 +663,24 @@
 
 <script>
 function switchExamTab(tabId) {
-    // Hide all contents
-    document.querySelectorAll('.exam-tab-content').forEach(el => el.style.display = 'none');
+    // Hide all contents and remove animation classes
+    document.querySelectorAll('.exam-tab-content').forEach(el => {
+        el.style.display = 'none';
+        el.classList.remove('active-tab-animation');
+    });
     // Remove active class from buttons
     document.querySelectorAll('.exam-tab-btn').forEach(btn => {
         btn.style.backgroundColor = '#2a2a35';
         btn.style.color = '#aaa';
     });
     
-    // Show selected content
-    document.getElementById('tab-' + tabId).style.display = 'flex';
+    // Show selected content and add colorful transition
+    const targetTab = document.getElementById('tab-' + tabId);
+    targetTab.style.display = 'flex';
+    // Trigger reflow to restart animation
+    void targetTab.offsetWidth;
+    targetTab.classList.add('active-tab-animation');
+
     // Highlight button
     const activeBtn = document.querySelector(`button[onclick="switchExamTab('${tabId}')"]`);
     if(activeBtn) {
