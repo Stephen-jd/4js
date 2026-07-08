@@ -128,70 +128,124 @@
                 <tr><td><strong>Uses of Everyday Materials</strong></td><td>Identify and compare the suitability of everyday materials; find out how shapes of solid objects can be changed.</td></tr>
             </table>
         </div>
-            {% for subject in subjects %}
-            <div class="syllabus-card" data-year="{{ subject.level }}" data-subject="{{ subject.name }}" style="background: white; border-radius: 16px; box-shadow: var(--shadow-sm); padding: 40px; margin-bottom: 40px; border: 1px solid var(--border-light);">
-                <div style="display: flex; align-items: center; gap: 15px; border-bottom: 3px solid var(--scandi-teal-dark); padding-bottom: 15px; margin-bottom: 30px;">
-                    <i class="fas fa-book-reader" style="font-size: 2.5rem; color: var(--scandi-teal-dark);"></i>
-                    <h2 style="font-size: 2rem; margin: 0; color: var(--text-dark);">{{ subject.level }} - {{ subject.name }}</h2>
-                </div>
-                
-                <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 30px;">{{ subject.description }}</p>
-
-                <!-- Modules -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 40px;">
-                    {% for module in subject.modules.all %}
-                    <div style="background: var(--off-white); padding: 24px; border-radius: 12px; border: 1px solid var(--border-light);">
-                        <h4 style="color: var(--scandi-teal-dark); margin-bottom: 12px; font-size: 1.2rem;">{{ module.title }}</h4>
-                        <ul style="list-style: none; padding: 0; color: var(--text-light); line-height: 1.8;">
-                            {% for topic in module.get_topics_list %}
-                            <li><i class="fas fa-check" style="color: #4CAF50; margin-right: 8px;"></i> {{ topic }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    {% endfor %}
-                </div>
-
-                <!-- Past Papers Table -->
-                {% if subject.past_papers.all %}
-                <div style="background: #f8faff; border: 1px solid #cce5ff; border-radius: 12px; overflow: hidden;">
-                    <div style="background: #0056b3; color: white; padding: 15px 24px; font-weight: 700; font-size: 1.2rem;">
-                        <i class="fas fa-file-pdf" style="margin-right: 10px;"></i> Past Papers Library
-                    </div>
-                    <div style="padding: 24px; overflow-x: auto;">
-                        <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 600px;">
-                            <thead>
-                                <tr style="border-bottom: 2px solid #dee2e6;">
-                                    <th style="padding: 12px; color: #495057;">Board</th>
-                                    <th style="padding: 12px; color: #495057;">Year</th>
-                                    <th style="padding: 12px; color: #495057;">Paper Name</th>
-                                    <th style="padding: 12px; color: #495057;">Download</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for paper in subject.past_papers.all %}
-                                <tr style="border-bottom: 1px solid #eee;">
-                                    <td style="padding: 12px; font-weight: 600;">{{ paper.board }}</td>
-                                    <td style="padding: 12px;">{{ paper.year }}</td>
-                                    <td style="padding: 12px;">{{ paper.paper_name }}</td>
-                                    <td style="padding: 12px;"><a href="{{ paper.link }}" target="_blank" style="color: #0056b3; text-decoration: underline;"><i class="fas fa-download"></i> PDF</a></td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                {% else %}
-                <div style="padding: 15px; background: #fff3e0; border-radius: 8px; color: #e65100;">
-                    <i class="fas fa-info-circle"></i> No official past papers available for this specific year/level yet.
-                </div>
-                {% endif %}
-
+        <!-- KS2 Static Syllabus -->
+        <div class="syllabus-card" data-year="Year 3 Year 4 Year 5 Year 6" data-subject="English Mathematics Science" style="background: white; border-radius: 16px; box-shadow: var(--shadow-sm); padding: 40px; margin-bottom: 40px; border: 1px solid var(--border-light);">
+            <div style="display: flex; align-items: center; gap: 15px; border-bottom: 3px solid var(--scandi-teal-dark); padding-bottom: 15px; margin-bottom: 30px;">
+                <i class="fas fa-graduation-cap" style="font-size: 2.5rem; color: #3498db;"></i>
+                <h2 style="font-size: 2rem; margin: 0; color: var(--text-dark);">Key Stage 2 (Years 3 to 6) National Curriculum</h2>
             </div>
-            {% empty %}
-            <div style="text-align: center; padding: 40px;">
-                <p>No syllabus data available in the database yet.</p>
-            </div>
-            {% endfor %}
+            <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 30px;">A clean, year-by-year breakdown of the KS2 National Curriculum for English, Maths, and Science in England.</p>
+
+            <h3 class="subject-title">🇬🇧 English (Years 3, 4, 5 & 6)</h3>
+            
+            <h4 class="year-title">Year 3</h4>
+            <table class="syl-table">
+                <tr><th width="25%">Area</th><th>Key Learning Objectives</th></tr>
+                <tr><td><strong>Spoken Language</strong></td><td>Listen and respond appropriately; ask relevant questions; articulate and justify answers.</td></tr>
+                <tr><td><strong>Word Reading</strong></td><td>Apply growing phonic knowledge of root words, prefixes, and suffixes.</td></tr>
+                <tr><td><strong>Reading Comprehension</strong></td><td>Develop positive attitudes to reading by listening to and discussing a wide range of fiction and non-fiction.</td></tr>
+                <tr><td><strong>Writing (Transcription)</strong></td><td>Spell words with prefixes and suffixes; spell homophones; use dictionaries.</td></tr>
+                <tr><td><strong>Writing (Composition)</strong></td><td>Plan writing by discussing ideas; compose sentences using a wider range of conjunctions.</td></tr>
+                <tr><td><strong>Grammar & Vocabulary</strong></td><td>Use a range of conjunctions, adverbs, and prepositions; use inverted commas for direct speech.</td></tr>
+            </table>
+
+            <h4 class="year-title">Year 4</h4>
+            <table class="syl-table">
+                <tr><th width="25%">Area</th><th>Key Learning Objectives</th></tr>
+                <tr><td><strong>Spoken Language</strong></td><td>Use relevant strategies to build vocabulary; maintain attention in collaborative conversations.</td></tr>
+                <tr><td><strong>Word Reading</strong></td><td>Continue to apply phonic knowledge and skills to read unfamiliar words.</td></tr>
+                <tr><td><strong>Reading Comprehension</strong></td><td>Identify themes and conventions in a wide range of books.</td></tr>
+                <tr><td><strong>Writing (Transcription)</strong></td><td>Spell words with prefixes and suffixes; spell words that are often misspelt.</td></tr>
+                <tr><td><strong>Writing (Composition)</strong></td><td>Evaluate and edit writing; proof-read for spelling and punctuation errors.</td></tr>
+                <tr><td><strong>Grammar & Vocabulary</strong></td><td>Extend the range of sentences with more than one clause; use fronted adverbials.</td></tr>
+            </table>
+
+            <h4 class="year-title">Year 5</h4>
+            <table class="syl-table">
+                <tr><th width="25%">Area</th><th>Key Learning Objectives</th></tr>
+                <tr><td><strong>Spoken Language</strong></td><td>Gain, maintain, and monitor the interest of the listener; consider different viewpoints.</td></tr>
+                <tr><td><strong>Word Reading</strong></td><td>Apply growing phonic knowledge both to read aloud and to understand new words.</td></tr>
+                <tr><td><strong>Reading Comprehension</strong></td><td>Increase familiarity with myths, legends, traditional stories, modern fiction, and other cultures.</td></tr>
+                <tr><td><strong>Writing (Transcription)</strong></td><td>Spell words with silent letters; use knowledge of morphology and etymology in spelling.</td></tr>
+                <tr><td><strong>Writing (Composition)</strong></td><td>Plan writing by identifying the audience and purpose; select appropriate grammar and vocabulary.</td></tr>
+                <tr><td><strong>Grammar & Vocabulary</strong></td><td>Use relative clauses; use brackets, dashes, or commas to indicate parenthesis.</td></tr>
+            </table>
+
+            <h4 class="year-title">Year 6</h4>
+            <table class="syl-table">
+                <tr><th width="25%">Area</th><th>Key Learning Objectives</th></tr>
+                <tr><td><strong>Spoken Language</strong></td><td>Select and use appropriate registers for effective communication; participate in debates.</td></tr>
+                <tr><td><strong>Word Reading</strong></td><td>Apply growing phonic knowledge to read aloud and understand new words.</td></tr>
+                <tr><td><strong>Reading Comprehension</strong></td><td>Learn a wide range of poetry by heart. Distinguish between statements of fact and opinion.</td></tr>
+                <tr><td><strong>Writing (Transcription)</strong></td><td>Use dictionaries and a thesaurus effectively for advanced spelling.</td></tr>
+                <tr><td><strong>Writing (Composition)</strong></td><td>Assess the effectiveness of their own and others' writing.</td></tr>
+                <tr><td><strong>Grammar & Vocabulary</strong></td><td>Use the passive voice; use the subjunctive form; use semi-colons, colons, and dashes.</td></tr>
+            </table>
+
+            <h3 class="subject-title">➗ Mathematics (Years 3, 4, 5 & 6)</h3>
+            
+            <h4 class="year-title">Year 3</h4>
+            <table class="syl-table">
+                <tr><th width="25%">Area</th><th>Key Learning Objectives</th></tr>
+                <tr><td><strong>Number & Place Value</strong></td><td>Count from 0 in multiples of 4, 8, 50 and 100; find 10 or 100 more or less.</td></tr>
+                <tr><td><strong>Addition & Subtraction</strong></td><td>Add and subtract numbers mentally, including three-digit numbers.</td></tr>
+                <tr><td><strong>Multiplication & Division</strong></td><td>Recall and use multiplication and division facts for the 3, 4, and 8 times tables.</td></tr>
+                <tr><td><strong>Measurement</strong></td><td>Measure, compare, add and subtract lengths, mass, volume/capacity.</td></tr>
+                <tr><td><strong>Geometry & Statistics</strong></td><td>Draw 2-D shapes and make 3-D shapes; Interpret and present data using bar charts.</td></tr>
+            </table>
+
+            <h4 class="year-title">Year 4</h4>
+            <table class="syl-table">
+                <tr><th width="25%">Area</th><th>Key Learning Objectives</th></tr>
+                <tr><td><strong>Number & Place Value</strong></td><td>Count in multiples of 6, 7, 9, 25 and 1,000; count backwards through 0.</td></tr>
+                <tr><td><strong>Addition & Subtraction</strong></td><td>Add and subtract numbers with up to 4 digits using columnar methods.</td></tr>
+                <tr><td><strong>Multiplication & Division</strong></td><td>Recall multiplication and division facts for tables up to 12 × 12.</td></tr>
+                <tr><td><strong>Measurement</strong></td><td>Convert between different units of measure; calculate the perimeter of rectilinear figures.</td></tr>
+                <tr><td><strong>Geometry & Statistics</strong></td><td>Compare and classify geometric shapes; Identify lines of symmetry.</td></tr>
+            </table>
+
+            <h4 class="year-title">Year 5</h4>
+            <table class="syl-table">
+                <tr><th width="25%">Area</th><th>Key Learning Objectives</th></tr>
+                <tr><td><strong>Number & Place Value</strong></td><td>Read, write, order and compare numbers to at least 1,000,000.</td></tr>
+                <tr><td><strong>Addition & Subtraction</strong></td><td>Add and subtract whole numbers with more than 4 digits.</td></tr>
+                <tr><td><strong>Multiplication & Division</strong></td><td>Multiply numbers up to 4 digits by a two-digit number using long multiplication.</td></tr>
+                <tr><td><strong>Fractions</strong></td><td>Compare and order fractions whose denominators are all multiples of the same number.</td></tr>
+                <tr><td><strong>Geometry & Statistics</strong></td><td>Know angles are measured in degrees; Draw given angles, and measure them in degrees.</td></tr>
+            </table>
+
+            <h4 class="year-title">Year 6</h4>
+            <table class="syl-table">
+                <tr><th width="25%">Area</th><th>Key Learning Objectives</th></tr>
+                <tr><td><strong>Number & Place Value</strong></td><td>Read, write, order and compare numbers up to 10,000,000.</td></tr>
+                <tr><td><strong>Addition & Subtraction</strong></td><td>Solve addition and subtraction multi-step problems in contexts.</td></tr>
+                <tr><td><strong>Multiplication & Division</strong></td><td>Divide numbers up to 4 digits by a two-digit whole number using long division.</td></tr>
+                <tr><td><strong>Fractions</strong></td><td>Add and subtract fractions with different denominators and mixed numbers.</td></tr>
+                <tr><td><strong>Geometry & Statistics</strong></td><td>Interpret and construct pie charts and line graphs; calculate the mean as an average.</td></tr>
+            </table>
+
+            <h3 class="subject-title">🔬 Science (Years 3, 4, 5 & 6)</h3>
+
+            <h4 class="year-title">Year 3 & 4</h4>
+            <table class="syl-table">
+                <tr><th width="25%">Area</th><th>Key Learning Objectives</th></tr>
+                <tr><td><strong>Working Scientifically</strong></td><td>Use scientific enquiry to answer questions; set up comparative and fair tests.</td></tr>
+                <tr><td><strong>Plants & Animals</strong></td><td>Identify functions of plant parts; describe the simple functions of the digestive system.</td></tr>
+                <tr><td><strong>States of Matter</strong></td><td>Compare solids, liquids or gases; observe how materials change state when heated or cooled.</td></tr>
+                <tr><td><strong>Light & Sound</strong></td><td>Recognise that shadows are formed when light is blocked; Identify how sounds are made via vibrations.</td></tr>
+                <tr><td><strong>Forces & Electricity</strong></td><td>Observe how magnets attract or repel; construct a simple series electrical circuit.</td></tr>
+            </table>
+
+            <h4 class="year-title">Year 5 & 6</h4>
+            <table class="syl-table">
+                <tr><th width="25%">Area</th><th>Key Learning Objectives</th></tr>
+                <tr><td><strong>Working Scientifically</strong></td><td>Plan enquiries recognising and controlling variables; take measurements with increasing accuracy.</td></tr>
+                <tr><td><strong>Living Things</strong></td><td>Describe differences in life cycles; classify plants and animals based on specific characteristics.</td></tr>
+                <tr><td><strong>Human Body</strong></td><td>Identify the main parts of the human circulatory system; recognise the impact of diet and exercise.</td></tr>
+                <tr><td><strong>Materials & Forces</strong></td><td>Group everyday materials on the basis of their properties; explain gravity and air resistance.</td></tr>
+                <tr><td><strong>Earth, Space & Evolution</strong></td><td>Describe movement of Earth and planets relative to the sun; recognise that living things have changed over time.</td></tr>
+            </table>
+        </div>
         </div>
     </div>
 </section>
