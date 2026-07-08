@@ -30,10 +30,14 @@ class ParticleWave {
             return;
         }
 
-        // Check session storage if already played
-        if (sessionStorage.getItem('4js_intro_played') === 'true') {
-            this.finish();
-            return;
+        // Check session storage safely
+        try {
+            if (sessionStorage.getItem('4js_intro_played') === 'true') {
+                this.finish();
+                return;
+            }
+        } catch (e) {
+            console.log('SessionStorage not available');
         }
 
         for (let i = 0; i < this.numParticles; i++) {
@@ -143,7 +147,9 @@ class ParticleWave {
             }, 800);
         }
         
-        sessionStorage.setItem('4js_intro_played', 'true');
+        try {
+            sessionStorage.setItem('4js_intro_played', 'true');
+        } catch(e) {}
     }
 }
 
