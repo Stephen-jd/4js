@@ -10,7 +10,39 @@ document.addEventListener('DOMContentLoaded', () => {
     initCounters();
     initCoursesAccordion();
     initReviewModal();
+    initCookieBanner();
 });
+
+function initCookieBanner() {
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const declineBtn = document.getElementById('decline-cookies');
+
+    if (!banner) return;
+
+    // Check if the user has already made a choice
+    const cookieConsent = localStorage.getItem('4js_cookie_consent');
+
+    if (!cookieConsent) {
+        // Show banner if no choice was made yet
+        setTimeout(() => {
+            banner.classList.remove('hidden');
+        }, 1500); // Slight delay so it doesn't interrupt page load instantly
+    }
+
+    const hideBanner = (choice) => {
+        localStorage.setItem('4js_cookie_consent', choice);
+        banner.classList.add('hidden');
+    };
+
+    if (acceptBtn) {
+        acceptBtn.addEventListener('click', () => hideBanner('accepted'));
+    }
+
+    if (declineBtn) {
+        declineBtn.addEventListener('click', () => hideBanner('declined'));
+    }
+}
 
 function initAppleAnimations() {
     const observerOptions = {
