@@ -321,15 +321,32 @@ h1, h2, h3, h4, h5, h6 {
   height: 72px;
 }
 
-.navbar-logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: var(--black); white-space: nowrap; flex-shrink: 0; }
+.navbar-logo { display: flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-weight: 700; color: var(--black); }
 
 .navbar-logo img {
   height: 45px;
   width: auto;
+  flex-shrink: 0;
 }
 
-.navbar-logo span {
-  color: var(--scandi-teal-dark);
+.nav-brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.nav-subtitle {
+  font-size: 0.8rem;
+  font-weight: normal;
+  color: var(--text-light);
+  line-height: 1.2;
 }
 
 .navbar-menu {
@@ -2437,6 +2454,36 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* --- Exam Tabs --- */
+.exam-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.exam-tab-btn {
+  background-color: #2a2a35;
+  color: #aaa;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.exam-tab-btn.active {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+.exam-tab-btn:hover {
+  transform: translateY(-2px);
+  color: var(--white);
+}
+
 /* --- Ultimate Mobile Typography Overrides --- */
 @media (max-width: 768px) {
   .hero-content h1, .hero-title, section[style*="padding: 160px"] h1 {
@@ -2454,6 +2501,23 @@ h1, h2, h3, h4, h5, h6 {
   }
   .heading-md {
     font-size: clamp(1.4rem, 6vw, 1.8rem) !important;
+  }
+  .nav-title {
+    font-size: 1rem;
+    white-space: normal;
+  }
+  .nav-subtitle {
+    font-size: 0.7rem;
+    white-space: normal;
+  }
+  .exam-tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+  .exam-tab-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
   }
 }
 
