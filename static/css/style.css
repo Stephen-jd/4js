@@ -2474,14 +2474,17 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   gap: 20px;
   border-left: 5px solid var(--scandi-teal-dark);
-  transform: translateY(150%);
-  transition: transform 0.6s var(--ease-out-expo);
+  transform: translateY(0);
+  transition: transform 0.6s var(--ease-out-expo), opacity 0.6s ease, visibility 0.6s;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.cookie-banner:not(.hidden) {
-  transform: translateY(0);
+.cookie-banner.hidden {
+  transform: translateY(150%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .cookie-content {
@@ -2521,6 +2524,13 @@ h1, h2, h3, h4, h5, h6 {
   }
   .cookie-buttons {
     width: 100%;
-    justify-content: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .cookie-buttons button {
+    flex: 1;
+    text-align: center;
+    padding: 12px 10px;
+    font-size: 0.95rem;
   }
 }
