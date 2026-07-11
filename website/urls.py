@@ -1,4 +1,5 @@
 from django.urls import path
+from django.views.generic.base import RedirectView
 from . import views
 
 urlpatterns = [
@@ -16,4 +17,12 @@ urlpatterns = [
     path('worksheets/<int:worksheet_id>/', views.take_worksheet, name='take_worksheet'),
     path('syllabus_explorer/', views.syllabus_explorer, name='syllabus_explorer'),
     path('terms/', views.terms, name='terms'),
+    
+    # Legacy SEO Redirects (301 Permanent)
+    path('about-us/', RedirectView.as_view(url='/why-us/', permanent=True)),
+    path('courses/', RedirectView.as_view(url='/#courses', permanent=True)),
+    path('contact-us/', RedirectView.as_view(url='/#contact', permanent=True)),
+    path('register/', RedirectView.as_view(url='/#plan-builder', permanent=True)),
+    path('testimonies/', RedirectView.as_view(url='/#reviews', permanent=True)),
+    path('11-plus/', RedirectView.as_view(url='/entrance-exams/', permanent=True)),
 ]
