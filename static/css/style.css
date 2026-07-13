@@ -179,6 +179,14 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 var(--section-pad-x);
 }
 
+.contact-card {
+  padding: 50px;
+}
+
+.pricing-card-inner {
+  padding: 40px;
+}
+
 /* --- Section Base --- */
 .section {
   padding: var(--section-pad-y) 0;
@@ -630,6 +638,28 @@ h1, h2, h3, h4, h5, h6 {
 .hero-content h1 em {
   font-style: normal;
   color: var(--scandi-teal-light);
+}
+
+.hero-btn-primary {
+  background-color: var(--scandi-teal-dark);
+  font-size: 1.2rem;
+  padding: 15px 30px;
+}
+
+.hero-btn-secondary {
+  background-color: white;
+  color: var(--black);
+  font-size: 1.2rem;
+  padding: 15px 30px;
+}
+
+.hero-btn-tertiary {
+  border: 2px solid rgba(255,255,255,0.3);
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
 }
 
 .hero-content p {
@@ -2222,6 +2252,12 @@ h1, h2, h3, h4, h5, h6 {
   .navbar-inner {
     height: 64px;
   }
+  .contact-card {
+    padding: 25px !important;
+  }
+  .pricing-card-inner {
+    padding: 20px !important;
+  }
 
   .hero-content h1 {
     font-size: clamp(2rem, 7vw, 3rem);
@@ -2229,6 +2265,13 @@ h1, h2, h3, h4, h5, h6 {
 
   .hero-buttons {
     flex-direction: column;
+    width: 100%;
+  }
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px !important;
+    font-size: 1rem !important;
   }
 
   .trust-grid {
