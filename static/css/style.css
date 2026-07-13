@@ -187,6 +187,13 @@ h1, h2, h3, h4, h5, h6 {
   padding: 40px;
 }
 
+.two-col-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
 /* --- Section Base --- */
 .section {
   padding: var(--section-pad-y) 0;
@@ -2257,6 +2264,10 @@ h1, h2, h3, h4, h5, h6 {
   }
   .pricing-card-inner {
     padding: 20px !important;
+  }
+  .two-col-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .hero-content h1 {
